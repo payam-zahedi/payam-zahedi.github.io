@@ -13,7 +13,7 @@ const Color portfolioGrey300 = Color(0xFFaaaaaa);
 const Color portfolioGrey500 = Color(0xFF666666);
 const Color portfolioGrey700 =  Color(0xFF333333);
 
-const Color portfolioGrey = ColorSwatch<int>(500, {
+const ColorSwatch portfolioGrey = ColorSwatch<int>(500, {
   100: portfolioGrey100,
   200: portfolioGrey200,
   300: portfolioGrey300,
