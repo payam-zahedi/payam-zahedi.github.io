@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/presentation/widgets/text_hint.dart';
 import 'package:portfolio/theme/colors.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,11 +12,29 @@ class HomeScreen extends StatelessWidget {
         child: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(
-              child: LimitedBox(
-                maxWidth: 100,
-                child: AboutMe(),
+              child: AboutMe(),
+            ),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: Container(
+                  alignment: AlignmentDirectional.centerStart,
+                  child: TextHint(
+                    text: 'What I Do',
+                  ),
+                ),
               ),
-            )
+            ),
+            SliverGrid.extent(
+              maxCrossAxisExtent: 700,
+              childAspectRatio: 16 / 4,
+              children: [
+                Container(color: Colors.red),
+                Container(color: Colors.black12),
+                Container(color: Colors.blue),
+                Container(color: Colors.green),
+              ],
+            ),
           ],
         ),
       ),
@@ -29,55 +48,53 @@ class AboutMe extends StatelessWidget {
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
-    return Container(
-      width: double.infinity,
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          Expanded(flex: 2, child: ImageAvatar()),
-          Expanded(
-            flex: 3,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text('Software Developer', style: textTheme.subtitle1),
-                Text(
-                  'Alex Smith',
-                  style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 12),
-                Text(
-                  'Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.',
-                  style: textTheme.caption?.copyWith(fontWeight: FontWeight.w600),
-                  strutStyle: StrutStyle(),
-                ),
-                SizedBox(height: 32),
-                Row(
-                  children: <Widget>[
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: Text('Download CV'),
-                    ),
-                    SizedBox(width: 4),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: StadiumBorder(
-                          side: BorderSide(
-                            color: portfolioGrey200,
-                            width: 2,
-                          ),
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      children: <Widget>[
+        Expanded(flex: 2, child: ImageAvatar()),
+        Expanded(
+          flex: 3,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text('Software Developer', style: textTheme.subtitle1),
+              Text(
+                'Alex Smith',
+                style:
+                    textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 12),
+              Text(
+                'Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.',
+                style: textTheme.caption?.copyWith(fontWeight: FontWeight.w600),
+                strutStyle: StrutStyle(),
+              ),
+              SizedBox(height: 32),
+              Row(
+                children: <Widget>[
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text('Download CV'),
+                  ),
+                  SizedBox(width: 4),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: StadiumBorder(
+                        side: BorderSide(
+                          color: portfolioGrey200,
+                          width: 2,
                         ),
                       ),
-                      onPressed: () {},
-                      child: Text('Contact'),
                     ),
-                  ],
-                ),
-              ],
-            ),
+                    onPressed: () {},
+                    child: Text('Contact'),
+                  ),
+                ],
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
@@ -92,7 +109,8 @@ class ImageAvatar extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(width: 18, color: Theme.of(context).colorScheme.onPrimary),
+              border: Border.all(
+                  width: 18, color: Theme.of(context).colorScheme.onPrimary),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black12,
@@ -102,7 +120,8 @@ class ImageAvatar extends StatelessWidget {
               ]),
           child: ClipOval(
             child: CachedNetworkImage(
-              imageUrl: 'https://hotfaz.ir/wp-content/uploads/2020/06/360284_857.jpg',
+              imageUrl:
+                  'https://hotfaz.ir/wp-content/uploads/2020/06/360284_857.jpg',
               fit: BoxFit.cover,
             ),
           ),
