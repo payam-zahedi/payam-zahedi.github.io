@@ -69,8 +69,8 @@ ThemeData _buildPortfolioTheme() {
     primaryTextTheme: _buildPortfolioTextTheme(base.primaryTextTheme),
     accentTextTheme: _buildPortfolioTextTheme(base.accentTextTheme),
     iconTheme: base.iconTheme.copyWith(color: portfolioGrey300),
-    dividerTheme: DividerThemeData(color: portfolioGrey200),
-    dividerColor: portfolioGrey200,
+    dividerTheme: DividerThemeData(color: portfolioGrey100),
+    dividerColor: portfolioGrey100,
   );
 }
 
@@ -122,7 +122,7 @@ const ColorScheme _portfolioLightScheme = ColorScheme(
   primaryVariant: portfolioBlue,
   secondary: portfolioGreen,
   secondaryVariant: portfolioGreen,
-  surface: portfolioGrey100,
+  surface: portfolioGrey50,
   background: portfolioWhite,
   error: portfolioRed,
   onPrimary: portfolioWhite,
