@@ -47,7 +47,15 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-
+  /// `Payam Zahedi Portfolio`
+  String get title {
+    return Intl.message(
+      'Payam Zahedi Portfolio',
+      name: 'title',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -56,6 +64,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en', countryCode: 'US'),
+      Locale.fromSubtags(languageCode: 'fa'),
     ];
   }
 
