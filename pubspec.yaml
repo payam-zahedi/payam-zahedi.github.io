@@ -10,6 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
   google_fonts: ^2.0.0
   fluttericon: ^2.0.0
   cached_network_image: ^3.0.0-nullsafety
@@ -22,3 +25,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+flutter_intl:
+  main_locale: en_US
+  enabled: true
