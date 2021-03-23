@@ -1,11 +1,16 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:fluttericon/linecons_icons.dart';
+import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/presentation/widgets/text_hint.dart';
 import 'package:portfolio/theme/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final localization = S.of(context);
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 64.0, vertical: 64),
@@ -25,14 +30,43 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SliverGrid.extent(
-              maxCrossAxisExtent: 700,
-              childAspectRatio: 16 / 4,
+            SliverStaggeredGrid.extent(
+              maxCrossAxisExtent: 600,
+              staggeredTiles: [
+                StaggeredTile.fit(1),
+                StaggeredTile.fit(1),
+                StaggeredTile.fit(1),
+                StaggeredTile.fit(1),
+              ],
               children: [
-                Container(color: Colors.red),
-                Container(color: Colors.black12),
-                Container(color: Colors.blue),
-                Container(color: Colors.green),
+                Center(
+                  child: CustomTile(
+                    title: 'Open Source',
+                    description: localization.defaultDescription,
+                    iconData: Linecons.pencil,
+                  ),
+                ),
+                Center(
+                  child: CustomTile(
+                    title: 'Open Source',
+                    description: localization.defaultDescription,
+                    iconData: Linecons.pencil,
+                  ),
+                ),
+                Center(
+                  child: CustomTile(
+                    title: 'Open Source',
+                    description: localization.defaultDescription,
+                    iconData: Linecons.pencil,
+                  ),
+                ),
+                Center(
+                  child: CustomTile(
+                    title: 'Open Source',
+                    description: localization.defaultDescription,
+                    iconData: Linecons.pencil,
+                  ),
+                ),
               ],
             ),
           ],
@@ -42,9 +76,53 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+class CustomTile extends StatelessWidget {
+  const CustomTile({
+    Key? key,
+    required this.title,
+    this.description,
+    this.iconData,
+  }) : super(key: key);
+
+  final String title;
+  final String? description;
+  final IconData? iconData;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: ListTileTheme(
+        iconColor: Theme.of(context).colorScheme.primary,
+        child: ListTile(
+          leading: iconData != null
+              ? Icon(
+                  Linecons.pencil,
+                  size: 33,
+                )
+              : null,
+          title: Text(
+            title,
+            style: Theme.of(context).textTheme.headline6?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
+          subtitle: description != null
+              ? Text(
+                  description!,
+                )
+              : null,
+          minVerticalPadding: 8,
+          horizontalTitleGap: 24,
+        ),
+      ),
+    );
+  }
+}
+
 class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final localization = S.of(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
@@ -65,7 +143,8 @@ class AboutMe extends StatelessWidget {
               ),
               SizedBox(height: 12),
               Text(
-                'Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.',
+                localization.defaultDescription,
+
                 style: textTheme.caption?.copyWith(fontWeight: FontWeight.w600),
                 strutStyle: StrutStyle(),
               ),
