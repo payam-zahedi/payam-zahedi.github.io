@@ -100,14 +100,14 @@ class CustomTile extends StatelessWidget {
                   size: 33,
                 )
               : null,
-          title: Text(
+          title: SelectableText(
             title,
             style: Theme.of(context).textTheme.headline6?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
           ),
           subtitle: description != null
-              ? Text(
+              ? SelectableText(
                   description!,
                 )
               : null,
@@ -135,16 +135,15 @@ class AboutMe extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text('Software Developer', style: textTheme.subtitle1),
-              Text(
+              SelectableText('Software Developer', style: textTheme.subtitle1),
+              SelectableText(
                 'Alex Smith',
                 style:
                     textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 12),
-              Text(
+              SelectableText(
                 localization.defaultDescription,
-
                 style: textTheme.caption?.copyWith(fontWeight: FontWeight.w600),
                 strutStyle: StrutStyle(),
               ),
