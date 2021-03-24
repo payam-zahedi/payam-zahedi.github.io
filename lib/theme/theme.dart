@@ -88,7 +88,6 @@ TextTheme _buildPortfolioTextTheme(TextTheme base) {
     headline5: base.headline5?.copyWith(
       fontWeight: FontWeight.w500,
       color: portfolioGrey700,
-
     ),
     headline6: base.headline6?.copyWith(
       fontSize: 18,
@@ -104,7 +103,10 @@ TextTheme _buildPortfolioTextTheme(TextTheme base) {
       fontWeight: FontWeight.w500,
       fontSize: 16,
     ),
-    bodyText2: base.bodyText2,
+    bodyText2: base.bodyText2?.copyWith(
+      fontSize: 14,
+      color: portfolioGrey500,
+    ),
     subtitle1: base.subtitle1?.copyWith(
       color: portfolioGrey300,
       letterSpacing: 1.1,
@@ -112,7 +114,7 @@ TextTheme _buildPortfolioTextTheme(TextTheme base) {
     button: base.button?.copyWith(
       fontWeight: FontWeight.w500,
       fontSize: 14,
-      color: Colors.red,
+      color: portfolioGrey700,
     ),
   ));
 }
