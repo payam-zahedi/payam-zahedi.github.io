@@ -5,6 +5,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:fluttericon/linecons_icons.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/presentation/widgets/text_hint.dart';
+import 'package:portfolio/presentation/widgets/timeline_tile.dart';
 import 'package:portfolio/theme/colors.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,11 +14,20 @@ class HomeScreen extends StatelessWidget {
     final localization = S.of(context);
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 64.0, vertical: 64),
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 64),
         child: CustomScrollView(
           slivers: [
+            SliverToBoxAdapter(child: AboutMe()),
             SliverToBoxAdapter(
-              child: AboutMe(),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: Container(
+                  alignment: AlignmentDirectional.centerStart,
+                  child: TextHint(
+                    text: 'Social Medias',
+                  ),
+                ),
+              ),
             ),
             SliverToBoxAdapter(
               child: Padding(
@@ -68,6 +78,95 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: Container(
+                  alignment: AlignmentDirectional.centerStart,
+                  //ToDo(payam) : add margin and alignment field to [TextHint] Widget
+                  child: TextHint(text: 'Education'),
+                ),
+              ),
+            ),
+            SliverStaggeredGrid.extent(
+              maxCrossAxisExtent: 600,
+              staggeredTiles: [
+                StaggeredTile.fit(1),
+                StaggeredTile.fit(1),
+                StaggeredTile.fit(1),
+              ],
+              children: [
+                TimeLineTile(
+                  position: 'Graphic Design',
+                  description: S.of(context).defaultDescription,
+                  title: 'university',
+                  date: '2019 - 2020',
+                ),
+                TimeLineTile(
+                  position: 'Graphic Design',
+                  description: S.of(context).defaultDescription,
+                  title: 'university',
+                  date: '2019',
+                ),
+                TimeLineTile(
+                  position: 'Graphic Design',
+                  description: S.of(context).defaultDescription,
+                  title: 'university',
+                  date: '2020',
+                ),
+              ],
+            ),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: Container(
+                  alignment: AlignmentDirectional.centerStart,
+                  child: TextHint(
+                    text: 'Experience',
+                  ),
+                ),
+              ),
+            ),
+            SliverStaggeredGrid.extent(
+              maxCrossAxisExtent: 600,
+              staggeredTiles: [
+                StaggeredTile.fit(1),
+                StaggeredTile.fit(1),
+                StaggeredTile.fit(1),
+              ],
+              children: [
+                TimeLineTile(
+                  position: 'Graphic Design',
+                  description: S.of(context).defaultDescription,
+                  title: 'university',
+                  date: '2019 - 2020',
+                ),
+                TimeLineTile(
+                  position: 'Graphic Design',
+                  description: S.of(context).defaultDescription,
+                  title: 'university',
+                  date: '2019',
+                ),
+                TimeLineTile(
+                  position: 'Graphic Design',
+                  description: S.of(context).defaultDescription,
+                  title: 'university',
+                  date: '2020',
+                ),
+              ],
+            ),
+
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: Container(
+                  alignment: AlignmentDirectional.centerStart,
+                  child: TextHint(
+                    text: 'Skills',
+                  ),
+                ),
+              ),
             ),
           ],
         ),
