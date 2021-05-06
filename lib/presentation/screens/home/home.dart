@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -13,162 +12,164 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final localization = S.of(context);
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 64),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(child: AboutMe()),
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: Container(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: TextHint(
-                    text: 'Social Medias',
+      body: Scrollbar(
+        isAlwaysShown: true,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 64),
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(child: AboutMe()),
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
+                  child: Container(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: TextHint(
+                      text: 'Social Medias',
+                    ),
                   ),
                 ),
               ),
-            ),
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: Container(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: TextHint(
-                    text: 'What I Do',
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
+                  child: Container(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: TextHint(
+                      text: 'What I Do',
+                    ),
                   ),
                 ),
               ),
-            ),
-            SliverStaggeredGrid.extent(
-              maxCrossAxisExtent: 600,
-              staggeredTiles: [
-                StaggeredTile.fit(1),
-                StaggeredTile.fit(1),
-                StaggeredTile.fit(1),
-                StaggeredTile.fit(1),
-              ],
-              children: [
-                Center(
-                  child: CustomTile(
-                    title: 'Open Source',
-                    description: localization.defaultDescription,
-                    iconData: Linecons.pencil,
+              SliverStaggeredGrid.extent(
+                maxCrossAxisExtent: 600,
+                staggeredTiles: [
+                  StaggeredTile.fit(1),
+                  StaggeredTile.fit(1),
+                  StaggeredTile.fit(1),
+                  StaggeredTile.fit(1),
+                ],
+                children: [
+                  Center(
+                    child: CustomTile(
+                      title: 'Open Source',
+                      description: localization.defaultDescription,
+                      iconData: Linecons.pencil,
+                    ),
                   ),
-                ),
-                Center(
-                  child: CustomTile(
-                    title: 'Open Source',
-                    description: localization.defaultDescription,
-                    iconData: Linecons.pencil,
+                  Center(
+                    child: CustomTile(
+                      title: 'Open Source',
+                      description: localization.defaultDescription,
+                      iconData: Linecons.pencil,
+                    ),
                   ),
-                ),
-                Center(
-                  child: CustomTile(
-                    title: 'Open Source',
-                    description: localization.defaultDescription,
-                    iconData: Linecons.pencil,
+                  Center(
+                    child: CustomTile(
+                      title: 'Open Source',
+                      description: localization.defaultDescription,
+                      iconData: Linecons.pencil,
+                    ),
                   ),
-                ),
-                Center(
-                  child: CustomTile(
-                    title: 'Open Source',
-                    description: localization.defaultDescription,
-                    iconData: Linecons.pencil,
+                  Center(
+                    child: CustomTile(
+                      title: 'Open Source',
+                      description: localization.defaultDescription,
+                      iconData: Linecons.pencil,
+                    ),
                   ),
-                ),
-              ],
-            ),
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: Container(
-                  alignment: AlignmentDirectional.centerStart,
-                  //ToDo(payam) : add margin and alignment field to [TextHint] Widget
-                  child: TextHint(text: 'Education'),
-                ),
+                ],
               ),
-            ),
-            SliverStaggeredGrid.extent(
-              maxCrossAxisExtent: 600,
-              staggeredTiles: [
-                StaggeredTile.fit(1),
-                StaggeredTile.fit(1),
-                StaggeredTile.fit(1),
-              ],
-              children: [
-                TimeLineTile(
-                  position: 'Graphic Design',
-                  description: S.of(context).defaultDescription,
-                  title: 'university',
-                  date: '2019 - 2020',
-                ),
-                TimeLineTile(
-                  position: 'Graphic Design',
-                  description: S.of(context).defaultDescription,
-                  title: 'university',
-                  date: '2019',
-                ),
-                TimeLineTile(
-                  position: 'Graphic Design',
-                  description: S.of(context).defaultDescription,
-                  title: 'university',
-                  date: '2020',
-                ),
-              ],
-            ),
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: Container(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: TextHint(
-                    text: 'Experience',
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
+                  child: Container(
+                    alignment: AlignmentDirectional.centerStart,
+                    //ToDo(payam) : add margin and alignment field to [TextHint] Widget
+                    child: TextHint(text: 'Education'),
                   ),
                 ),
               ),
-            ),
-            SliverStaggeredGrid.extent(
-              maxCrossAxisExtent: 600,
-              staggeredTiles: [
-                StaggeredTile.fit(1),
-                StaggeredTile.fit(1),
-                StaggeredTile.fit(1),
-              ],
-              children: [
-                TimeLineTile(
-                  position: 'Graphic Design',
-                  description: S.of(context).defaultDescription,
-                  title: 'university',
-                  date: '2019 - 2020',
-                ),
-                TimeLineTile(
-                  position: 'Graphic Design',
-                  description: S.of(context).defaultDescription,
-                  title: 'university',
-                  date: '2019',
-                ),
-                TimeLineTile(
-                  position: 'Graphic Design',
-                  description: S.of(context).defaultDescription,
-                  title: 'university',
-                  date: '2020',
-                ),
-              ],
-            ),
-
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: Container(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: TextHint(
-                    text: 'Skills',
+              SliverStaggeredGrid.extent(
+                maxCrossAxisExtent: 600,
+                staggeredTiles: [
+                  StaggeredTile.fit(1),
+                  StaggeredTile.fit(1),
+                  StaggeredTile.fit(1),
+                ],
+                children: [
+                  TimeLineTile(
+                    position: 'Graphic Design',
+                    description: S.of(context).defaultDescription,
+                    title: 'university',
+                    date: '2019 - 2020',
+                  ),
+                  TimeLineTile(
+                    position: 'Graphic Design',
+                    description: S.of(context).defaultDescription,
+                    title: 'university',
+                    date: '2019',
+                  ),
+                  TimeLineTile(
+                    position: 'Graphic Design',
+                    description: S.of(context).defaultDescription,
+                    title: 'university',
+                    date: '2020',
+                  ),
+                ],
+              ),
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
+                  child: Container(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: TextHint(
+                      text: 'Experience',
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+              SliverStaggeredGrid.extent(
+                maxCrossAxisExtent: 600,
+                staggeredTiles: [
+                  StaggeredTile.fit(1),
+                  StaggeredTile.fit(1),
+                  StaggeredTile.fit(1),
+                ],
+                children: [
+                  TimeLineTile(
+                    position: 'Graphic Design',
+                    description: S.of(context).defaultDescription,
+                    title: 'university',
+                    date: '2019 - 2020',
+                  ),
+                  TimeLineTile(
+                    position: 'Graphic Design',
+                    description: S.of(context).defaultDescription,
+                    title: 'university',
+                    date: '2019',
+                  ),
+                  TimeLineTile(
+                    position: 'Graphic Design',
+                    description: S.of(context).defaultDescription,
+                    title: 'university',
+                    date: '2020',
+                  ),
+                ],
+              ),
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
+                  child: Container(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: TextHint(
+                      text: 'Skills',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -237,8 +238,7 @@ class AboutMe extends StatelessWidget {
               SelectableText('Software Developer', style: textTheme.subtitle1),
               SelectableText(
                 'Alex Smith',
-                style:
-                    textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
+                style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 12),
               SelectableText(
@@ -286,8 +286,7 @@ class ImageAvatar extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(
-                  width: 18, color: Theme.of(context).colorScheme.onPrimary),
+              border: Border.all(width: 18, color: Theme.of(context).colorScheme.onPrimary),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black12,
@@ -296,9 +295,8 @@ class ImageAvatar extends StatelessWidget {
                 )
               ]),
           child: ClipOval(
-            child: CachedNetworkImage(
-              imageUrl:
-                  'https://hotfaz.ir/wp-content/uploads/2020/06/360284_857.jpg',
+            child: Image.network(
+              'https://hotfaz.ir/wp-content/uploads/2020/06/360284_857.jpg',
               fit: BoxFit.cover,
             ),
           ),
