@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:fluttericon/linecons_icons.dart';
@@ -157,17 +157,17 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: Container(
-                    alignment: AlignmentDirectional.centerStart,
-                    child: TextHint(
-                      text: 'Skills',
-                    ),
-                  ),
-                ),
-              ),
+              // SliverToBoxAdapter(
+              //   child: Padding(
+              //     padding: const EdgeInsets.symmetric(vertical: 16.0),
+              //     child: Container(
+              //       alignment: AlignmentDirectional.centerStart,
+              //       child: TextHint(
+              //         text: 'Skills',
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
@@ -238,7 +238,8 @@ class AboutMe extends StatelessWidget {
               SelectableText('Software Developer', style: textTheme.subtitle1),
               SelectableText(
                 'Alex Smith',
-                style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
+                style:
+                    textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 12),
               SelectableText(
@@ -286,7 +287,8 @@ class ImageAvatar extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(width: 18, color: Theme.of(context).colorScheme.onPrimary),
+              border: Border.all(
+                  width: 18, color: Theme.of(context).colorScheme.onPrimary),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black12,
@@ -295,8 +297,9 @@ class ImageAvatar extends StatelessWidget {
                 )
               ]),
           child: ClipOval(
-            child: Image.network(
-              'https://hotfaz.ir/wp-content/uploads/2020/06/360284_857.jpg',
+            child: CachedNetworkImage(
+              imageUrl:
+                  'https://i.pinimg.com/236x/ee/0e/70/ee0e70b2ae91f7209f3a78247986e280--disney-princes-disney-cruiseplan.jpg',
               fit: BoxFit.cover,
             ),
           ),
