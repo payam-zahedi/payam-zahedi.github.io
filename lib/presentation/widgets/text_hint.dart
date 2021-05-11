@@ -5,10 +5,16 @@ class TextHint extends StatelessWidget {
     Key? key,
     required this.text,
     this.dividerValue = 0.3,
-  }) : super(key: key);
+    this.alignment,
+    this.padding,
+    this.margin,
+  }) : super(key: key ?? ValueKey(text));
 
   final String text;
   final double dividerValue;
+  final AlignmentGeometry? alignment;
+  final EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? padding;
 
   @override
   Widget build(BuildContext context) {
@@ -22,26 +28,26 @@ class TextHint extends StatelessWidget {
           fontWeight: FontWeight.w900,
         );
 
-    return Container(
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            color: Theme.of(context).colorScheme.primary,
-            width: 2,
+    return Align(
+      alignment: AlignmentDirectional.centerStart,
+      child: Container(
+        margin: const EdgeInsets.symmetric(vertical: 16.0),
+        padding: EdgeInsetsDirectional.only(bottom: 8),
+        decoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(
+              color: Theme.of(context).colorScheme.primary,
+              width: 2,
+            ),
           ),
         ),
-      ),
-      child: Column(
-        children: <Widget>[
-          Text(
-            text,
-            style: textStyle,
-            softWrap: false,
-            overflow: TextOverflow.clip,
-            maxLines: 1,
-          ),
-          SizedBox(height: 8),
-        ],
+        child: Text(
+          text,
+          style: textStyle,
+          softWrap: false,
+          overflow: TextOverflow.clip,
+          maxLines: 1,
+        ),
       ),
     );
   }

@@ -20,26 +20,10 @@ class HomeScreen extends StatelessWidget {
             slivers: [
               SliverToBoxAdapter(child: AboutMe()),
               SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: Container(
-                    alignment: AlignmentDirectional.centerStart,
-                    child: TextHint(
-                      text: 'Social Medias',
-                    ),
-                  ),
-                ),
+                child: TextHint(text: 'Social Medias'),
               ),
               SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: Container(
-                    alignment: AlignmentDirectional.centerStart,
-                    child: TextHint(
-                      text: 'What I Do',
-                    ),
-                  ),
-                ),
+                child: TextHint(text: 'What I Do'),
               ),
               SliverStaggeredGrid.extent(
                 maxCrossAxisExtent: 600,
@@ -80,16 +64,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: Container(
-                    alignment: AlignmentDirectional.centerStart,
-                    //ToDo(payam) : add margin and alignment field to [TextHint] Widget
-                    child: TextHint(text: 'Education'),
-                  ),
-                ),
-              ),
+              SliverToBoxAdapter(child: TextHint(text: 'Education')),
               SliverStaggeredGrid.extent(
                 maxCrossAxisExtent: 600,
                 staggeredTiles: [
@@ -119,17 +94,10 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: Container(
-                    alignment: AlignmentDirectional.centerStart,
-                    child: TextHint(
-                      text: 'Experience',
-                    ),
-                  ),
-                ),
+                child: TextHint(text: 'Experience'),
               ),
               SliverStaggeredGrid.extent(
+                key: ValueKey('Experience'),
                 maxCrossAxisExtent: 600,
                 staggeredTiles: [
                   StaggeredTile.fit(1),
@@ -157,17 +125,13 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: Container(
-                    alignment: AlignmentDirectional.centerStart,
-                    child: TextHint(
-                      text: 'Skills',
-                    ),
-                  ),
-                ),
-              ),
+              // SliverToBoxAdapter(
+              //   child: TextHint(text: 'Skills'),
+              // ),
+              //ToDo(payam) : add project section
+              //ToDo(payam) : add skills section
+              //ToDo(payam) : add code lab
+              //ToDo(payam) : add fun fact
             ],
           ),
         ),
