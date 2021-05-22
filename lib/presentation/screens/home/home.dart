@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttericon/linecons_icons.dart';
+import 'package:portfolio/presentation/widgets/social_link.dart';
 import 'package:portfolio/presentation/widgets/text_hint.dart';
 import 'widget/index.dart';
 
@@ -32,55 +33,30 @@ class HomeScreen extends StatelessWidget {
                             spacing: 32,
                             runSpacing: 32,
                             children: [
-                              Column(
-                                children: <Widget>[
-                                  Image.asset(
-                                    'assets/icon/social/linkedin.png',
-                                    width: 40,
-                                    height: 40,
-                                  ),
-                                  Text('LinkedIn'),
-                                ],
+                              SocialLink(
+                                url: 'https://twitter.com/payamzahedi95/',
+                                imagePath: 'assets/icon/social/twitter.png',
+                                title: 'Twitter',
                               ),
-                              Column(
-                                children: <Widget>[
-                                  Image.asset(
-                                    'assets/icon/social/linkedin.png',
-                                    width: 40,
-                                    height: 40,
-                                  ),
-                                  Text('LinkedIn'),
-                                ],
+                              SocialLink(
+                                url: 'https://github.com/payam-zahedi',
+                                imagePath: 'assets/icon/social/github.png',
+                                title: 'Github',
                               ),
-                              Column(
-                                children: <Widget>[
-                                  Image.asset(
-                                    'assets/icon/social/linkedin.png',
-                                    width: 40,
-                                    height: 40,
-                                  ),
-                                  Text('LinkedIn'),
-                                ],
+                              SocialLink(
+                                url: 'https://www.linkedin.com/in/payamzahedi95/',
+                                imagePath: 'assets/icon/social/linkedin.png',
+                                title: 'LinkedIn',
                               ),
-                              Column(
-                                children: <Widget>[
-                                  Image.asset(
-                                    'assets/icon/social/linkedin.png',
-                                    width: 40,
-                                    height: 40,
-                                  ),
-                                  Text('LinkedIn'),
-                                ],
+                              SocialLink(
+                                url: 'https://medium.com/@payam-zahedi/',
+                                imagePath: 'assets/icon/social/medium.png',
+                                title: 'Medium',
                               ),
-                              Column(
-                                children: <Widget>[
-                                  Image.asset(
-                                    'assets/icon/social/linkedin.png',
-                                    width: 40,
-                                    height: 40,
-                                  ),
-                                  Text('LinkedIn'),
-                                ],
+                              SocialLink(
+                                url: 'https://stackoverflow.com/users/9689717/payam-zahedi?tab=profile/',
+                                imagePath: 'assets/icon/social/stackoverflow.png',
+                                title: 'StackOverflow',
                               ),
                             ],
                           ),
