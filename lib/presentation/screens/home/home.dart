@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:fluttericon/linecons_icons.dart';
-import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/presentation/widgets/text_hint.dart';
-import 'package:portfolio/presentation/widgets/timeline_tile.dart';
-
 import 'widget/index.dart';
 
 class HomeScreen extends StatelessWidget {
+  //ToDo(payam) : add social links
+  //ToDo(payam) : add project section
+  //ToDo(payam) : add skills section
+  //ToDo(payam) : add code lab
+  //ToDo(payam) : add fun fact
   @override
   Widget build(BuildContext context) {
-    final localization = S.of(context);
+    // final localization = S.of(context);
     return Scaffold(
       body: Scrollbar(
         isAlwaysShown: true,
@@ -19,119 +20,183 @@ class HomeScreen extends StatelessWidget {
           child: CustomScrollView(
             slivers: [
               SliverToBoxAdapter(child: AboutMe()),
+
               SliverToBoxAdapter(
-                child: TextHint(text: 'Social Medias'),
+                child: Container(
+                  child: Center(
+                    child: Column(
+                      children: <Widget>[
+                        Text('Find Me in Socials'),
+                        Container(
+                          child: Wrap(
+                            spacing: 32,
+                            runSpacing: 32,
+                            children: [
+                              Column(
+                                children: <Widget>[
+                                  Image.asset(
+                                    'assets/icon/social/linkedin.png',
+                                    width: 40,
+                                    height: 40,
+                                  ),
+                                  Text('LinkedIn'),
+                                ],
+                              ),
+                              Column(
+                                children: <Widget>[
+                                  Image.asset(
+                                    'assets/icon/social/linkedin.png',
+                                    width: 40,
+                                    height: 40,
+                                  ),
+                                  Text('LinkedIn'),
+                                ],
+                              ),
+                              Column(
+                                children: <Widget>[
+                                  Image.asset(
+                                    'assets/icon/social/linkedin.png',
+                                    width: 40,
+                                    height: 40,
+                                  ),
+                                  Text('LinkedIn'),
+                                ],
+                              ),
+                              Column(
+                                children: <Widget>[
+                                  Image.asset(
+                                    'assets/icon/social/linkedin.png',
+                                    width: 40,
+                                    height: 40,
+                                  ),
+                                  Text('LinkedIn'),
+                                ],
+                              ),
+                              Column(
+                                children: <Widget>[
+                                  Image.asset(
+                                    'assets/icon/social/linkedin.png',
+                                    width: 40,
+                                    height: 40,
+                                  ),
+                                  Text('LinkedIn'),
+                                ],
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
               ),
+
               SliverToBoxAdapter(
                 child: TextHint(text: 'What I Do'),
               ),
-              SliverStaggeredGrid.extent(
-                maxCrossAxisExtent: 600,
-                staggeredTiles: [
-                  StaggeredTile.fit(1),
-                  StaggeredTile.fit(1),
-                  StaggeredTile.fit(1),
-                  StaggeredTile.fit(1),
-                ],
-                children: [
-                  Center(
-                    child: CustomTile(
-                      title: 'Open Source',
-                      description: localization.defaultDescription,
-                      iconData: Linecons.pencil,
-                    ),
-                  ),
-                  Center(
-                    child: CustomTile(
-                      title: 'Open Source',
-                      description: localization.defaultDescription,
-                      iconData: Linecons.pencil,
-                    ),
-                  ),
-                  Center(
-                    child: CustomTile(
-                      title: 'Open Source',
-                      description: localization.defaultDescription,
-                      iconData: Linecons.pencil,
-                    ),
-                  ),
-                  Center(
-                    child: CustomTile(
-                      title: 'Open Source',
-                      description: localization.defaultDescription,
-                      iconData: Linecons.pencil,
-                    ),
-                  ),
-                ],
-              ),
-              SliverToBoxAdapter(child: TextHint(text: 'Education')),
-              SliverStaggeredGrid.extent(
-                maxCrossAxisExtent: 600,
-                staggeredTiles: [
-                  StaggeredTile.fit(1),
-                  StaggeredTile.fit(1),
-                  StaggeredTile.fit(1),
-                ],
-                children: [
-                  TimeLineTile(
-                    position: 'Graphic Design',
-                    description: S.of(context).defaultDescription,
-                    title: 'university',
-                    date: '2019 - 2020',
-                  ),
-                  TimeLineTile(
-                    position: 'Graphic Design',
-                    description: S.of(context).defaultDescription,
-                    title: 'university',
-                    date: '2019',
-                  ),
-                  TimeLineTile(
-                    position: 'Graphic Design',
-                    description: S.of(context).defaultDescription,
-                    title: 'university',
-                    date: '2020',
-                  ),
-                ],
-              ),
-              SliverToBoxAdapter(
-                child: TextHint(text: 'Experience'),
-              ),
-              SliverStaggeredGrid.extent(
-                key: ValueKey('Experience'),
-                maxCrossAxisExtent: 600,
-                staggeredTiles: [
-                  StaggeredTile.fit(1),
-                  StaggeredTile.fit(1),
-                  StaggeredTile.fit(1),
-                ],
-                children: [
-                  TimeLineTile(
-                    position: 'Graphic Design',
-                    description: S.of(context).defaultDescription,
-                    title: 'university',
-                    date: '2019 - 2020',
-                  ),
-                  TimeLineTile(
-                    position: 'Graphic Design',
-                    description: S.of(context).defaultDescription,
-                    title: 'university',
-                    date: '2019',
-                  ),
-                  TimeLineTile(
-                    position: 'Graphic Design',
-                    description: S.of(context).defaultDescription,
-                    title: 'university',
-                    date: '2020',
-                  ),
-                ],
-              ),
+              // SliverStaggeredGrid.extent(
+              //   maxCrossAxisExtent: 600,
+              //   staggeredTiles: [
+              //     StaggeredTile.fit(1),
+              //     StaggeredTile.fit(1),
+              //     StaggeredTile.fit(1),
+              //     StaggeredTile.fit(1),
+              //   ],
+              //   children: [
+              //     Center(
+              //       child: CustomTile(
+              //         title: 'Open Source',
+              //         description: localization.defaultDescription,
+              //         iconData: Linecons.pencil,
+              //       ),
+              //     ),
+              //     Center(
+              //       child: CustomTile(
+              //         title: 'Open Source',
+              //         description: localization.defaultDescription,
+              //         iconData: Linecons.pencil,
+              //       ),
+              //     ),
+              //     Center(
+              //       child: CustomTile(
+              //         title: 'Open Source',
+              //         description: localization.defaultDescription,
+              //         iconData: Linecons.pencil,
+              //       ),
+              //     ),
+              //     Center(
+              //       child: CustomTile(
+              //         title: 'Open Source',
+              //         description: localization.defaultDescription,
+              //         iconData: Linecons.pencil,
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              // SliverToBoxAdapter(child: TextHint(text: 'Education')),
+              // SliverStaggeredGrid.extent(
+              //   maxCrossAxisExtent: 600,
+              //   staggeredTiles: [
+              //     StaggeredTile.fit(1),
+              //     StaggeredTile.fit(1),
+              //     StaggeredTile.fit(1),
+              //   ],
+              //   children: [
+              //     TimeLineTile(
+              //       position: 'Graphic Design',
+              //       description: S.of(context).defaultDescription,
+              //       title: 'university',
+              //       date: '2019 - 2020',
+              //     ),
+              //     TimeLineTile(
+              //       position: 'Graphic Design',
+              //       description: S.of(context).defaultDescription,
+              //       title: 'university',
+              //       date: '2019',
+              //     ),
+              //     TimeLineTile(
+              //       position: 'Graphic Design',
+              //       description: S.of(context).defaultDescription,
+              //       title: 'university',
+              //       date: '2020',
+              //     ),
+              //   ],
+              // ),
+              // SliverToBoxAdapter(
+              //   child: TextHint(text: 'Experience'),
+              // ),
+              // SliverStaggeredGrid.extent(
+              //   key: ValueKey('Experience'),
+              //   maxCrossAxisExtent: 600,
+              //   staggeredTiles: [
+              //     StaggeredTile.fit(1),
+              //     StaggeredTile.fit(1),
+              //     StaggeredTile.fit(1),
+              //   ],
+              //   children: [
+              //     TimeLineTile(
+              //       position: 'Graphic Design',
+              //       description: S.of(context).defaultDescription,
+              //       title: 'university',
+              //       date: '2019 - 2020',
+              //     ),
+              //     TimeLineTile(
+              //       position: 'Graphic Design',
+              //       description: S.of(context).defaultDescription,
+              //       title: 'university',
+              //       date: '2019',
+              //     ),
+              //     TimeLineTile(
+              //       position: 'Graphic Design',
+              //       description: S.of(context).defaultDescription,
+              //       title: 'university',
+              //       date: '2020',
+              //     ),
+              //   ],
+              // ),
               // SliverToBoxAdapter(
               //   child: TextHint(text: 'Skills'),
               // ),
-              //ToDo(payam) : add project section
-              //ToDo(payam) : add skills section
-              //ToDo(payam) : add code lab
-              //ToDo(payam) : add fun fact
             ],
           ),
         ),
