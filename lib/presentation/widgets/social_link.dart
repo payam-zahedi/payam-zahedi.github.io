@@ -6,7 +6,7 @@ class SocialLink extends StatelessWidget {
     Key? key,
     required this.url,
     required this.imagePath,
-    this.size = const Size.square(24),
+    this.size = const Size.square(36),
     this.title,
     this.titleStyle,
   }) : super(key: key);
@@ -31,13 +31,19 @@ class SocialLink extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Image.asset(
                   imagePath,
                   width: size.width,
                   height: size.height,
                 ),
-                if (title?.isNotEmpty ?? false) Text(title!, style: titleStyle),
+                if (title?.isNotEmpty ?? false)
+                  Text(
+                    title!,
+                    style: titleStyle,
+                    textAlign: TextAlign.center,
+                  ),
               ],
             ),
           ),
