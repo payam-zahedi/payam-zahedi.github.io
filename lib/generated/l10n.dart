@@ -61,10 +61,130 @@ class S {
   }
 
   /// `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
-  String get defaultDescription {
+  String get profileDescription {
     return Intl.message(
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      name: 'defaultDescription',
+      name: 'profileDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payam`
+  String get name {
+    return Intl.message(
+      'Payam',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Zahedi`
+  String get family {
+    return Intl.message(
+      'Zahedi',
+      name: 'family',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Find Me in Socials`
+  String get socialTitle {
+    return Intl.message(
+      'Find Me in Socials',
+      name: 'socialTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Twitter`
+  String get twitter {
+    return Intl.message(
+      'Twitter',
+      name: 'twitter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `LinkedIn`
+  String get linkedIn {
+    return Intl.message(
+      'LinkedIn',
+      name: 'linkedIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Github`
+  String get github {
+    return Intl.message(
+      'Github',
+      name: 'github',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medium`
+  String get medium {
+    return Intl.message(
+      'Medium',
+      name: 'medium',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stack Overflow`
+  String get stackOverflow {
+    return Intl.message(
+      'Stack Overflow',
+      name: 'stackOverflow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `telegram`
+  String get telegram {
+    return Intl.message(
+      'telegram',
+      name: 'telegram',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Software Developer`
+  String get softwareDeveloper {
+    return Intl.message(
+      'Software Developer',
+      name: 'softwareDeveloper',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Download CV`
+  String get cvButton {
+    return Intl.message(
+      'Download CV',
+      name: 'cvButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact`
+  String get contact {
+    return Intl.message(
+      'Contact',
+      name: 'contact',
       desc: '',
       args: [],
     );

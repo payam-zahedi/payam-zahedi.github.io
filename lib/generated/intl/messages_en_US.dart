@@ -21,8 +21,22 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "defaultDescription": MessageLookupByLibrary.simpleMessage(
+        "contact": MessageLookupByLibrary.simpleMessage("Contact"),
+        "cvButton": MessageLookupByLibrary.simpleMessage("Download CV"),
+        "family": MessageLookupByLibrary.simpleMessage("Zahedi"),
+        "github": MessageLookupByLibrary.simpleMessage("Github"),
+        "linkedIn": MessageLookupByLibrary.simpleMessage("LinkedIn"),
+        "medium": MessageLookupByLibrary.simpleMessage("Medium"),
+        "name": MessageLookupByLibrary.simpleMessage("Payam"),
+        "profileDescription": MessageLookupByLibrary.simpleMessage(
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
-        "title": MessageLookupByLibrary.simpleMessage("Payam Zahedi Portfolio")
+        "socialTitle":
+            MessageLookupByLibrary.simpleMessage("Find Me in Socials"),
+        "softwareDeveloper":
+            MessageLookupByLibrary.simpleMessage("Software Developer"),
+        "stackOverflow": MessageLookupByLibrary.simpleMessage("Stack Overflow"),
+        "telegram": MessageLookupByLibrary.simpleMessage("telegram"),
+        "title": MessageLookupByLibrary.simpleMessage("Payam Zahedi Portfolio"),
+        "twitter": MessageLookupByLibrary.simpleMessage("Twitter")
       };
 }

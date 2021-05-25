@@ -1,5 +1,17 @@
 {
   "@@locale": "en_US",
   "title": "Payam Zahedi Portfolio",
-  "defaultDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  "profileDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "name":"Payam",
+  "family":"Zahedi",
+  "socialTitle": "Find Me in Socials",
+  "twitter": "Twitter",
+  "linkedIn": "LinkedIn",
+  "github": "Github",
+  "medium": "Medium",
+  "stackOverflow": "Stack Overflow",
+  "telegram": "telegram",
+  "softwareDeveloper": "Software Developer",
+  "cvButton": "Download CV",
+  "contact": "Contact"
 }
