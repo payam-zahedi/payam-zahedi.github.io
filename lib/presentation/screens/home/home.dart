@@ -5,7 +5,6 @@ import 'package:portfolio/responsive/responsive.dart';
 import 'package:portfolio/util/index.dart';
 
 class HomeScreen extends StatelessWidget {
-  //ToDo(payam) : add localization
   //ToDo(payam) : add project section
   //ToDo(payam) : add skills section
   //ToDo(payam) : add code lab
@@ -33,12 +32,22 @@ class HomeScreen extends StatelessWidget {
                 padding: EdgeInsets.only(top: 32),
                 sliver: SliverToBoxAdapter(
                   child: Center(
-                    child: Text(context.localization.socialTitle),
+                    child: Text(
+                      context.localization.socialTitle,
+                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                            fontSize: 16,
+                        color: Theme.of(context).colorScheme.onSurface,
+                        fontWeight: FontWeight.bold,
+                          ),
+                    ),
                   ),
                 ),
               ),
-              SliverToBoxAdapter(
-                child: Center(child: SocialLinksWidget()),
+              SliverPadding(
+                padding: EdgeInsets.only(top: 16),
+                sliver: SliverToBoxAdapter(
+                  child: Center(child: SocialLinksWidget()),
+                ),
               ),
               // SliverToBoxAdapter(
               //   child: TextHint(text: 'What I Do'),

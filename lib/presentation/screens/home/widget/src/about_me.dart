@@ -17,7 +17,6 @@ class AboutMe extends StatelessWidget {
     return ResponsiveBuilder(
       builder: (context, platform) {
 
-
         final developerName = SelectableText(
           '${localization.name} ${localization.family}',
           style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
@@ -28,7 +27,7 @@ class AboutMe extends StatelessWidget {
         final description = SelectableText(
           localization.profileDescription,
           style: textTheme.caption?.copyWith(fontWeight: FontWeight.w600),
-          textAlign: TextAlign.justify,
+          textAlign: TextAlign.start,
           strutStyle: StrutStyle(),
         );
         final downloadButton = ElevatedButton(

@@ -109,7 +109,6 @@ TextTheme _buildPortfolioTextTheme(TextTheme base) {
     ),
     subtitle1: base.subtitle1?.copyWith(
       color: portfolioGrey300,
-      letterSpacing: 1.1,
     ),
     button: base.button?.copyWith(
       fontWeight: FontWeight.w500,
