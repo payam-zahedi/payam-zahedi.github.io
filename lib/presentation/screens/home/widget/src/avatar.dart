@@ -12,7 +12,7 @@ class ImageAvatar extends StatelessWidget {
           decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(
-                width: context.isTablet() ? 12 : 18,
+                width: context.isMobile() ? 10 : context.isTablet() ? 12 : 18,
                 color: Theme.of(context).colorScheme.onPrimary,
               ),
               boxShadow: [

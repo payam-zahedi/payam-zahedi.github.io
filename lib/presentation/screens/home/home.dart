@@ -37,10 +37,8 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               SliverToBoxAdapter(
-                child: Center(
-                  child: SocialLinksWidget(),
-                ),
-              )
+                child: Center(child: SocialLinksWidget()),
+              ),
               // SliverStaggeredGrid.extent(
               //   maxCrossAxisExtent: 130,
               //   staggeredTiles: [

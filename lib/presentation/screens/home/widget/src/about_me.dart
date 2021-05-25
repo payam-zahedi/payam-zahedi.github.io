@@ -23,37 +23,48 @@ class AboutMe extends StatelessWidget {
               children: <Widget>[
                 SelectableText('Software Developer', style: textTheme.subtitle1),
                 SelectableText(
-                  'Alex Smith',
+                  'Payam Zahedi',
                   style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 12),
                 SelectableText(
                   localization.defaultDescription,
                   style: textTheme.caption?.copyWith(fontWeight: FontWeight.w600),
+                  textAlign: TextAlign.justify,
                   strutStyle: StrutStyle(),
                 ),
                 SizedBox(height: 32),
-                Center(
+                Container(
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text('Download CV'),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                          ),
+                          child: Text('Download CV'),
+                        ),
                       ),
-                      SizedBox(width: 4),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          shape: StadiumBorder(
-                            side: BorderSide(
-                              color: portfolioGrey200,
-                              width: 2,
+                      SizedBox(height: 4),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: StadiumBorder(
+                              side: BorderSide(
+                                color: portfolioGrey200,
+                                width: 2,
+                              ),
                             ),
                           ),
+                          onPressed: () {},
+                          child: Text('Contact'),
                         ),
-                        onPressed: () {},
-                        child: Text('Contact'),
                       ),
                     ],
                   ),

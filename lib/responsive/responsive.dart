@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 export 'package:portfolio/presentation/widgets/responsive/index.dart';
 
-const maxMobileWith = 500;
-const maxTabletWith = 800;
+const maxMobileWith = 426;
+const maxTabletWith = 769;
 
 extension ResponsiveExtension on BuildContext {
   // This isMobile, isTablet, isDesktop help us later
