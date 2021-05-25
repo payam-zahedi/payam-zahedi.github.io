@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:portfolio/presentation/screens/home/home.dart';
-import 'package:portfolio/theme/theme.dart';
+import 'package:portfolio/resource/index.dart';
 
 import 'generated/l10n.dart';
 

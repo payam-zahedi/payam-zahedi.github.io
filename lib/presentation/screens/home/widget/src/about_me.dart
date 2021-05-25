@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/presentation/widgets/responsive/src/responsive_builder.dart';
 import 'package:portfolio/responsive/responsive.dart';
-import 'package:portfolio/theme/colors.dart';
+import 'package:portfolio/resource/index.dart';
 
 import 'avatar.dart';
 
@@ -17,7 +17,7 @@ class AboutMe extends StatelessWidget {
       if (platform == ResponsivePlatform.mobile) {
         return Column(
           children: <Widget>[
-            ImageAvatar(),
+            ImageAvatar(imageUrl: defaultImageAvatarUrl),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -45,8 +45,7 @@ class AboutMe extends StatelessWidget {
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                          ),
+                          style: ElevatedButton.styleFrom(),
                           child: Text('Download CV'),
                         ),
                       ),
@@ -81,9 +80,13 @@ class AboutMe extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              Expanded(flex:context.isTablet()? 3 : 2, child: ImageAvatar()),
               Expanded(
-                flex:context.isTablet()? 4 : 3,
+                flex: context.isTablet() ? 3 : 2,
+                child: ImageAvatar(
+                    imageUrl: defaultImageAvatarUrl),
+              ),
+              Expanded(
+                flex: context.isTablet() ? 4 : 3,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[

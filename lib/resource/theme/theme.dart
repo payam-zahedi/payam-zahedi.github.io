@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import './colors.dart';
+import 'colors.dart';
 
 const defaultLetterSpacing = 0.03;
 const mediumLetterSpacing = 0.04;
