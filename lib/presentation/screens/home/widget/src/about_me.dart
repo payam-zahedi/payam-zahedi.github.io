@@ -3,160 +3,138 @@ import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/presentation/widgets/responsive/src/responsive_builder.dart';
 import 'package:portfolio/responsive/responsive.dart';
 import 'package:portfolio/resource/index.dart';
+import 'package:portfolio/util/index.dart';
 
 import 'avatar.dart';
 
 class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final localization = S.of(context);
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
+    final localization = context.localization;
 
-    return ResponsiveBuilder(builder: (context, platform) {
-      if (platform == ResponsivePlatform.mobile) {
+    return ResponsiveBuilder(
+      builder: (context, platform) {
+
+
+        final developerName = SelectableText(
+          '${localization.name} ${localization.family}',
+          style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
+        );
+        final jobTitle =
+            SelectableText(S.of(context).softwareDeveloper, style: textTheme.subtitle1);
+        final imageAvatar = ImageAvatar(imageUrl: defaultImageAvatarUrl);
+        final description = SelectableText(
+          localization.profileDescription,
+          style: textTheme.caption?.copyWith(fontWeight: FontWeight.w600),
+          textAlign: TextAlign.justify,
+          strutStyle: StrutStyle(),
+        );
+        final downloadButton = ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(),
+          child: Text(S.of(context).cvButton),
+        );
+        final contactButton = ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: StadiumBorder(
+              side: BorderSide(
+                color: portfolioGrey200,
+                width: 2,
+              ),
+            ),
+          ),
+          onPressed: () {},
+          child: Text(S.of(context).contact),
+        );
+
+
+        if (platform == ResponsivePlatform.mobile) {
+          return Column(
+            children: <Widget>[
+              imageAvatar,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  jobTitle,
+                  developerName,
+                  SizedBox(height: 12),
+                  description,
+                  SizedBox(height: 32),
+                  Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        SizedBox(
+                          width: double.infinity,
+                          child: downloadButton,
+                        ),
+                        SizedBox(height: 4),
+                        SizedBox(
+                          width: double.infinity,
+                          child: contactButton,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          );
+        }
+
         return Column(
-          children: <Widget>[
-            ImageAvatar(imageUrl: defaultImageAvatarUrl),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                SelectableText('Software Developer', style: textTheme.subtitle1),
-                SelectableText(
-                  'Payam Zahedi',
-                  style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
+                Expanded(
+                  flex: context.isTablet() ? 3 : 2,
+                  child: imageAvatar,
                 ),
-                SizedBox(height: 12),
-                SelectableText(
-                  localization.defaultDescription,
-                  style: textTheme.caption?.copyWith(fontWeight: FontWeight.w600),
-                  textAlign: TextAlign.justify,
-                  strutStyle: StrutStyle(),
-                ),
-                SizedBox(height: 32),
-                Container(
-                  alignment: Alignment.center,
-                  padding: EdgeInsets.symmetric(horizontal: 16),
+                Expanded(
+                  flex: context.isTablet() ? 4 : 3,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(),
-                          child: Text('Download CV'),
+                      jobTitle,
+                      developerName,
+                      SizedBox(height: 12),
+                      description,
+                      SizedBox(height: 32),
+                      if (platform == ResponsivePlatform.desktop)
+                        Row(
+                          children: <Widget>[
+                            downloadButton,
+                            SizedBox(width: 4),
+                            contactButton,
+                          ],
                         ),
-                      ),
-                      SizedBox(height: 4),
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            shape: StadiumBorder(
-                              side: BorderSide(
-                                color: portfolioGrey200,
-                                width: 2,
-                              ),
-                            ),
-                          ),
-                          onPressed: () {},
-                          child: Text('Contact'),
-                        ),
-                      ),
                     ],
                   ),
                 ),
               ],
             ),
-          ],
-        );
-      }
-
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              Expanded(
-                flex: context.isTablet() ? 3 : 2,
-                child: ImageAvatar(
-                    imageUrl: defaultImageAvatarUrl),
-              ),
-              Expanded(
-                flex: context.isTablet() ? 4 : 3,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+            if (platform == ResponsivePlatform.tablet)
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
-                    SelectableText('Software Developer', style: textTheme.subtitle1),
-                    SelectableText(
-                      'Alex Smith',
-                      style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(height: 12),
-                    SelectableText(
-                      localization.defaultDescription,
-                      style: textTheme.caption?.copyWith(fontWeight: FontWeight.w600),
-                      strutStyle: StrutStyle(),
-                    ),
-                    SizedBox(height: 32),
-                    if (platform == ResponsivePlatform.desktop)
-                      Row(
-                        children: <Widget>[
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Download CV'),
-                          ),
-                          SizedBox(width: 4),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              shape: StadiumBorder(
-                                side: BorderSide(
-                                  color: portfolioGrey200,
-                                  width: 2,
-                                ),
-                              ),
-                            ),
-                            onPressed: () {},
-                            child: Text('Contact'),
-                          ),
-                        ],
-                      ),
+                    downloadButton,
+                    SizedBox(width: 4),
+                    contactButton,
                   ],
                 ),
               ),
-            ],
-          ),
-          if (platform == ResponsivePlatform.tablet)
-            Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Text('Download CV'),
-                  ),
-                  SizedBox(width: 4),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: StadiumBorder(
-                        side: BorderSide(
-                          color: portfolioGrey200,
-                          width: 2,
-                        ),
-                      ),
-                    ),
-                    onPressed: () {},
-                    child: Text('Contact'),
-                  ),
-                ],
-              ),
-            ),
-        ],
-      );
-    });
+          ],
+        );
+      },
+    );
   }
 }
