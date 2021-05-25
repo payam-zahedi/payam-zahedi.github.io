@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/presentation/widgets/responsive/responsive_layout.dart';
+import 'package:portfolio/presentation/widgets/responsive/src/responsive_layout.dart';
 import 'package:portfolio/presentation/widgets/social_link.dart';
 
 class SocialLinksWidget extends StatelessWidget {

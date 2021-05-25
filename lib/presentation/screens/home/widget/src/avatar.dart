@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/responsive/responsive.dart';
 
 class ImageAvatar extends StatelessWidget {
   @override
@@ -10,7 +11,10 @@ class ImageAvatar extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(width: 18, color: Theme.of(context).colorScheme.onPrimary),
+              border: Border.all(
+                width: context.isTablet() ? 12 : 18,
+                color: Theme.of(context).colorScheme.onPrimary,
+              ),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black12,

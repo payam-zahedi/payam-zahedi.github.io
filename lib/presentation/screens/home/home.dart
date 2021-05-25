@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttericon/linecons_icons.dart';
 import 'widget/index.dart';
-
+import 'package:portfolio/responsive/responsive.dart';
 
 class HomeScreen extends StatelessWidget {
   //ToDo(payam) : add project section
@@ -15,13 +15,25 @@ class HomeScreen extends StatelessWidget {
       body: Scrollbar(
         isAlwaysShown: true,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 64),
+          padding: EdgeInsets.symmetric(
+            vertical: 16,
+            horizontal: (context.isMobile()
+                ? 16
+                : context.isTablet()
+                    ? 24
+                    : 64),
+          ),
           child: CustomScrollView(
             slivers: [
-              SliverToBoxAdapter(child: AboutMe()),
               SliverToBoxAdapter(
-                child: Center(
-                  child: Text('Find Me in Socials'),
+                child: AboutMe(),
+              ),
+              SliverPadding(
+                padding: EdgeInsets.only(top: 32),
+                sliver: SliverToBoxAdapter(
+                  child: Center(
+                    child: Text('Find Me in Socials'),
+                  ),
                 ),
               ),
               SliverToBoxAdapter(
