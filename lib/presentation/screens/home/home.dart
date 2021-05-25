@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:fluttericon/linecons_icons.dart';
 import 'widget/index.dart';
 import 'package:portfolio/responsive/responsive.dart';
+import 'package:portfolio/util/index.dart';
 
 class HomeScreen extends StatelessWidget {
+  //ToDo(payam) : add localization
   //ToDo(payam) : add project section
   //ToDo(payam) : add skills section
   //ToDo(payam) : add code lab
   //ToDo(payam) : add fun fact
   @override
   Widget build(BuildContext context) {
-    // final localization = S.of(context);
     return Scaffold(
       body: Scrollbar(
         isAlwaysShown: true,
@@ -32,56 +33,13 @@ class HomeScreen extends StatelessWidget {
                 padding: EdgeInsets.only(top: 32),
                 sliver: SliverToBoxAdapter(
                   child: Center(
-                    child: Text('Find Me in Socials'),
+                    child: Text(context.localization.socialTitle),
                   ),
                 ),
               ),
               SliverToBoxAdapter(
                 child: Center(child: SocialLinksWidget()),
               ),
-              // SliverStaggeredGrid.extent(
-              //   maxCrossAxisExtent: 130,
-              //   staggeredTiles: [
-              //     StaggeredTile.extent(1, 100),
-              //     StaggeredTile.extent(1, 100),
-              //     StaggeredTile.extent(1, 100),
-              //     StaggeredTile.extent(1, 100),
-              //     StaggeredTile.extent(1, 100),
-              //     StaggeredTile.extent(1, 100),
-              //   ],
-              //   children: [
-              //     SocialLink(
-              //       url: 'https://twitter.com/payamzahedi95/',
-              //       imagePath: 'assets/icon/social/twitter.png',
-              //       title: 'Twitter',
-              //     ),
-              //     SocialLink(
-              //       url: 'https://github.com/payam-zahedi',
-              //       imagePath: 'assets/icon/social/github.png',
-              //       title: 'Github',
-              //     ),
-              //     SocialLink(
-              //       url: 'https://www.linkedin.com/in/payamzahedi95/',
-              //       imagePath: 'assets/icon/social/linkedin.png',
-              //       title: 'LinkedIn',
-              //     ),
-              //     SocialLink(
-              //       url: 'https://medium.com/@payam-zahedi/',
-              //       imagePath: 'assets/icon/social/medium.png',
-              //       title: 'Medium',
-              //     ),
-              //     SocialLink(
-              //       url: 'https://stackoverflow.com/users/9689717/payam-zahedi?tab=profile/',
-              //       imagePath: 'assets/icon/social/stackoverflow.png',
-              //       title: 'Stack Overflow',
-              //     ),
-              //     SocialLink(
-              //       url: 'https://t.me/payamzahedi95/',
-              //       imagePath: 'assets/icon/social/telegram.png',
-              //       title: 'Telegram',
-              //     ),
-              //   ],
-              // ),
               // SliverToBoxAdapter(
               //   child: TextHint(text: 'What I Do'),
               // ),
