@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/presentation/widgets/responsive/src/responsive_layout.dart';
 import 'package:portfolio/presentation/widgets/social_link.dart';
+import 'package:portfolio/util/index.dart';
 
 class SocialLinksWidget extends StatelessWidget {
   const SocialLinksWidget({
@@ -9,8 +10,43 @@ class SocialLinksWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.localization;
+
+    final socialLinks = [
+      SocialLink(
+        url: 'https://twitter.com/payamzahedi95/',
+        imagePath: 'assets/icon/social/twitter.png',
+        title: localization.twitter,
+      ),
+      SocialLink(
+        url: 'https://github.com/payam-zahedi',
+        imagePath: 'assets/icon/social/github.png',
+        title: localization.github,
+      ),
+      SocialLink(
+        url: 'https://www.linkedin.com/in/payamzahedi95/',
+        imagePath: 'assets/icon/social/linkedin.png',
+        title: localization.linkedIn,
+      ),
+      SocialLink(
+        url: 'https://medium.com/@payam-zahedi/',
+        imagePath: 'assets/icon/social/medium.png',
+        title: localization.medium,
+      ),
+      SocialLink(
+        url: 'https://stackoverflow.com/users/9689717/payam-zahedi?tab=profile/',
+        imagePath: 'assets/icon/social/stackoverflow.png',
+        title: localization.stackOverflow,
+      ),
+      SocialLink(
+        url: 'https://t.me/payamzahedi95/',
+        imagePath: 'assets/icon/social/telegram.png',
+        title: localization.telegram,
+      ),
+    ];
 
     final width = FixedColumnWidth(120);
+
     return ResponsiveLayout(
       mobile: Table(
         defaultColumnWidth: width,
@@ -39,37 +75,3 @@ class SocialLinksWidget extends StatelessWidget {
     );
   }
 }
-
-
-const socialLinks = [
-  SocialLink(
-    url: 'https://twitter.com/payamzahedi95/',
-    imagePath: 'assets/icon/social/twitter.png',
-    title: 'Twitter',
-  ),
-  SocialLink(
-    url: 'https://github.com/payam-zahedi',
-    imagePath: 'assets/icon/social/github.png',
-    title: 'Github',
-  ),
-  SocialLink(
-    url: 'https://www.linkedin.com/in/payamzahedi95/',
-    imagePath: 'assets/icon/social/linkedin.png',
-    title: 'LinkedIn',
-  ),
-  SocialLink(
-    url: 'https://medium.com/@payam-zahedi/',
-    imagePath: 'assets/icon/social/medium.png',
-    title: 'Medium',
-  ),
-  SocialLink(
-    url: 'https://stackoverflow.com/users/9689717/payam-zahedi?tab=profile/',
-    imagePath: 'assets/icon/social/stackoverflow.png',
-    title: 'Stack Overflow',
-  ),
-  SocialLink(
-    url: 'https://t.me/payamzahedi95/',
-    imagePath: 'assets/icon/social/telegram.png',
-    title: 'Telegram',
-  ),
-];
