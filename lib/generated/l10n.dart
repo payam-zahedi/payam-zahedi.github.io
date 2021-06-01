@@ -189,6 +189,76 @@ class S {
       args: [],
     );
   }
+
+  /// `I'm a software developer who enjoys building new things, learning and challenges. I specialize in mobile software development. But I'm also interested in other areas of software engineering. I use Flutter to develop multi-platform software and use native Kotlin to produce native Android software.`
+  String get softwareDeveloperDescription {
+    return Intl.message(
+      'I\'m a software developer who enjoys building new things, learning and challenges. I specialize in mobile software development. But I\'m also interested in other areas of software engineering. I use Flutter to develop multi-platform software and use native Kotlin to produce native Android software.',
+      name: 'softwareDeveloperDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Open Source`
+  String get openSource {
+    return Intl.message(
+      'Open Source',
+      name: 'openSource',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I learned everything from open source. So I decided to be part of this community. I use my free time to participate in open source and developers community. Even this Portfolio web site is Open source, you can check the source code of it in my Github Account.`
+  String get openSourceDescription {
+    return Intl.message(
+      'I learned everything from open source. So I decided to be part of this community. I use my free time to participate in open source and developers community. Even this Portfolio web site is Open source, you can check the source code of it in my Github Account.',
+      name: 'openSourceDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Speaker & Organizer`
+  String get speaker {
+    return Intl.message(
+      'Speaker & Organizer',
+      name: 'speaker',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I love sharing my knowledge with the community by writing, speaking and organizing Meetups and events. I am also one of the funders & organizers of Persian Flutter Community. You can find our events at PersianFlutter.com.`
+  String get speakerDescription {
+    return Intl.message(
+      'I love sharing my knowledge with the community by writing, speaking and organizing Meetups and events. I am also one of the funders & organizers of Persian Flutter Community. You can find our events at PersianFlutter.com.',
+      name: 'speakerDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Design Tools`
+  String get designTools {
+    return Intl.message(
+      'Design Tools',
+      name: 'designTools',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I'm curious about product design methods and tools and passionate to read about them. I also have the ability to use tools like Adobe XD and Figma.`
+  String get designToolsDescription {
+    return Intl.message(
+      'I\'m curious about product design methods and tools and passionate to read about them. I also have the ability to use tools like Adobe XD and Figma.',
+      name: 'designToolsDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

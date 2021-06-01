@@ -13,5 +13,12 @@
   "telegram": "telegram",
   "softwareDeveloper": "Software Developer",
   "cvButton": "Download CV",
-  "contact": "Contact"
+  "contact": "Contact",
+  "softwareDeveloperDescription": "I'm a software developer who enjoys building new things, learning and challenges. I specialize in mobile software development. But I'm also interested in other areas of software engineering. I use Flutter to develop multi-platform software and use native Kotlin to produce native Android software.",
+  "openSource": "Open Source",
+  "openSourceDescription": "I learned everything from open source. So I decided to be part of this community. I use my free time to participate in open source and developers community. Even this Portfolio web site is Open source, you can check the source code of it in my Github Account.",
+  "speaker": "Speaker & Organizer",
+  "speakerDescription": "I love sharing my knowledge with the community by writing, speaking and organizing Meetups and events. I am also one of the funders & organizers of Persian Flutter Community. You can find our events at PersianFlutter.com.",
+  "designTools": "Design Tools",
+  "designToolsDescription": "I'm curious about product design methods and tools and passionate to read about them. I also have the ability to use tools like Adobe XD and Figma."
 }

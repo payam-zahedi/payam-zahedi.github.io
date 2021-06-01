@@ -23,17 +23,28 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "contact": MessageLookupByLibrary.simpleMessage("Contact"),
         "cvButton": MessageLookupByLibrary.simpleMessage("Download CV"),
+        "designTools": MessageLookupByLibrary.simpleMessage("Design Tools"),
+        "designToolsDescription": MessageLookupByLibrary.simpleMessage(
+            "I\'m curious about product design methods and tools and passionate to read about them. I also have the ability to use tools like Adobe XD and Figma."),
         "family": MessageLookupByLibrary.simpleMessage("Zahedi"),
         "github": MessageLookupByLibrary.simpleMessage("Github"),
         "linkedIn": MessageLookupByLibrary.simpleMessage("LinkedIn"),
         "medium": MessageLookupByLibrary.simpleMessage("Medium"),
         "name": MessageLookupByLibrary.simpleMessage("Payam"),
+        "openSource": MessageLookupByLibrary.simpleMessage("Open Source"),
+        "openSourceDescription": MessageLookupByLibrary.simpleMessage(
+            "I learned everything from open source. So I decided to be part of this community. I use my free time to participate in open source and developers community. Even this Portfolio web site is Open source, you can check the source code of it in my Github Account."),
         "profileDescription": MessageLookupByLibrary.simpleMessage(
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
         "socialTitle":
             MessageLookupByLibrary.simpleMessage("Find Me in Socials"),
         "softwareDeveloper":
             MessageLookupByLibrary.simpleMessage("Software Developer"),
+        "softwareDeveloperDescription": MessageLookupByLibrary.simpleMessage(
+            "I\'m a software developer who enjoys building new things, learning and challenges. I specialize in mobile software development. But I\'m also interested in other areas of software engineering. I use Flutter to develop multi-platform software and use native Kotlin to produce native Android software."),
+        "speaker": MessageLookupByLibrary.simpleMessage("Speaker & Organizer"),
+        "speakerDescription": MessageLookupByLibrary.simpleMessage(
+            "I love sharing my knowledge with the community by writing, speaking and organizing Meetups and events. I am also one of the funders & organizers of Persian Flutter Community. You can find our events at PersianFlutter.com."),
         "stackOverflow": MessageLookupByLibrary.simpleMessage("Stack Overflow"),
         "telegram": MessageLookupByLibrary.simpleMessage("telegram"),
         "title": MessageLookupByLibrary.simpleMessage("Payam Zahedi Portfolio"),
