@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fluttericon/linecons_icons.dart';
+import 'package:portfolio/presentation/screens/home/widget/src/what_i_do.dart';
+import 'package:portfolio/presentation/widgets/text/text_hint.dart';
 import 'widget/index.dart';
 import 'package:portfolio/responsive/responsive.dart';
 import 'package:portfolio/util/index.dart';
 
 class HomeScreen extends StatelessWidget {
-  //ToDo(payam) : add project section
-  //ToDo(payam) : add skills section
-  //ToDo(payam) : add code lab
-  //ToDo(payam) : add fun fact
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,8 +33,8 @@ class HomeScreen extends StatelessWidget {
                       context.localization.socialTitle,
                       style: Theme.of(context).textTheme.subtitle1?.copyWith(
                             fontSize: 16,
-                        color: Theme.of(context).colorScheme.onSurface,
-                        fontWeight: FontWeight.bold,
+                            color: Theme.of(context).colorScheme.onSurface,
+                            fontWeight: FontWeight.bold,
                           ),
                     ),
                   ),
@@ -49,48 +46,12 @@ class HomeScreen extends StatelessWidget {
                   child: Center(child: SocialLinksWidget()),
                 ),
               ),
-              // SliverToBoxAdapter(
-              //   child: TextHint(text: 'What I Do'),
-              // ),
-              // SliverStaggeredGrid.extent(
-              //   maxCrossAxisExtent: 600,
-              //   staggeredTiles: [
-              //     StaggeredTile.fit(1),
-              //     StaggeredTile.fit(1),
-              //     StaggeredTile.fit(1),
-              //     StaggeredTile.fit(1),
-              //   ],
-              //   children: [
-              //     Center(
-              //       child: CustomTile(
-              //         title: 'Open Source',
-              //         description: localization.defaultDescription,
-              //         iconData: Linecons.pencil,
-              //       ),
-              //     ),
-              //     Center(
-              //       child: CustomTile(
-              //         title: 'Open Source',
-              //         description: localization.defaultDescription,
-              //         iconData: Linecons.pencil,
-              //       ),
-              //     ),
-              //     Center(
-              //       child: CustomTile(
-              //         title: 'Open Source',
-              //         description: localization.defaultDescription,
-              //         iconData: Linecons.pencil,
-              //       ),
-              //     ),
-              //     Center(
-              //       child: CustomTile(
-              //         title: 'Open Source',
-              //         description: localization.defaultDescription,
-              //         iconData: Linecons.pencil,
-              //       ),
-              //     ),
-              //   ],
-              // ),
+              SliverToBoxAdapter(
+                child: TextHint(text: 'What I Do'),
+              ),
+              SliverToBoxAdapter(
+                child: WhatIDoWidget(),
+              ),
               // SliverToBoxAdapter(child: TextHint(text: 'Education')),
               // SliverStaggeredGrid.extent(
               //   maxCrossAxisExtent: 600,
@@ -163,45 +124,3 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class CustomTile extends StatelessWidget {
-  const CustomTile({
-    Key? key,
-    required this.title,
-    this.description,
-    this.iconData,
-  }) : super(key: key);
-
-  final String title;
-  final String? description;
-  final IconData? iconData;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: ListTileTheme(
-        iconColor: Theme.of(context).colorScheme.primary,
-        child: ListTile(
-          leading: iconData != null
-              ? Icon(
-                  Linecons.pencil,
-                  size: 33,
-                )
-              : null,
-          title: SelectableText(
-            title,
-            style: Theme.of(context).textTheme.headline6?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
-          ),
-          subtitle: description != null
-              ? SelectableText(
-                  description!,
-                )
-              : null,
-          minVerticalPadding: 8,
-          horizontalTitleGap: 24,
-        ),
-      ),
-    );
-  }
-}
