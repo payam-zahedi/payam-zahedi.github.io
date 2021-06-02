@@ -23,6 +23,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   pedantic: ^1.11.0
+  build_runner: ^2.0.4
+  build_web_compilers: ^3.0.0
 
 flutter:
   uses-material-design: true
