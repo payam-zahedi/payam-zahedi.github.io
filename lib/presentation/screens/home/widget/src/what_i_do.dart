@@ -39,7 +39,8 @@ class WhatIDoWidget extends StatelessWidget {
     ];
     return ResponsiveBuilder(builder: (context, platform) {
       return Padding(
-        padding: EdgeInsets.symmetric(horizontal: platform == ResponsivePlatform.tablet ? 8 : 0),
+        padding: EdgeInsets.symmetric(
+            horizontal: platform == ResponsivePlatform.tablet ? 8 : 0),
         child: Table(
           defaultVerticalAlignment: TableCellVerticalAlignment.top,
           children: platform == ResponsivePlatform.desktop

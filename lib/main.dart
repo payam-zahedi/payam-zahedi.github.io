@@ -8,7 +8,8 @@ import 'generated/l10n.dart';
 void main() {
   runApp(Portfolio());
 }
-//ToDo(payam) : add What I do section
+
+//ToDo(payam) : add image profile
 //ToDo(payam) : add project section
 //ToDo(payam) : add skills section
 //ToDo(payam) : add code lab

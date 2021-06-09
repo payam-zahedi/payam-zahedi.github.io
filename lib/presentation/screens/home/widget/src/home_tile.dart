@@ -21,21 +21,21 @@ class HomeTile extends StatelessWidget {
       child: ListTile(
         leading: iconData != null
             ? Icon(
-          iconData,
-          size: 33,
-        )
+                iconData,
+                size: 33,
+              )
             : null,
         title: SelectableText(
           title,
           style: Theme.of(context).textTheme.headline6?.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
+                fontWeight: FontWeight.bold,
+              ),
         ),
         subtitle: description != null
             ? SelectableText(
-          description!,
-          minLines: minLines,
-        )
+                description!,
+                minLines: minLines,
+              )
             : null,
         minVerticalPadding: 8,
         horizontalTitleGap: 24,

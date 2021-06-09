@@ -37,7 +37,7 @@ class ImageAvatar extends StatelessWidget {
               ]),
           child: ClipOval(
             child: Image.network(
-              imageUrl ,
+              imageUrl,
               fit: boxFit ?? BoxFit.cover,
             ),
           ),

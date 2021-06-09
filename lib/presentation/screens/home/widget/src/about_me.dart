@@ -16,13 +16,12 @@ class AboutMe extends StatelessWidget {
 
     return ResponsiveBuilder(
       builder: (context, platform) {
-
         final developerName = SelectableText(
           '${localization.name} ${localization.family}',
           style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
         );
-        final jobTitle =
-            SelectableText(S.of(context).softwareDeveloper, style: textTheme.subtitle1);
+        final jobTitle = SelectableText(S.of(context).softwareDeveloper,
+            style: textTheme.subtitle1);
         final imageAvatar = ImageAvatar(imageUrl: defaultImageAvatarUrl);
         final description = SelectableText(
           localization.profileDescription,
@@ -47,7 +46,6 @@ class AboutMe extends StatelessWidget {
           onPressed: () {},
           child: Text(S.of(context).contact),
         );
-
 
         if (platform == ResponsivePlatform.mobile) {
           return Column(

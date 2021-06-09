@@ -34,7 +34,8 @@ class SocialLinksWidget extends StatelessWidget {
         title: localization.medium,
       ),
       SocialLink(
-        url: 'https://stackoverflow.com/users/9689717/payam-zahedi?tab=profile/',
+        url:
+            'https://stackoverflow.com/users/9689717/payam-zahedi?tab=profile/',
         imagePath: 'assets/icon/social/stackoverflow.png',
         title: localization.stackOverflow,
       ),

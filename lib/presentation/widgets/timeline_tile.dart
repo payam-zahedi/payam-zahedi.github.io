@@ -20,7 +20,7 @@ class TimeLineTile extends StatelessWidget {
     final scheme = theme.colorScheme;
     const startPadding = EdgeInsetsDirectional.only(start: 40.0, top: 4);
     return Container(
-      padding: const EdgeInsets.symmetric(vertical : 16.0),
+      padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -77,8 +77,8 @@ class TimeLineTile extends StatelessWidget {
             child: Text(
               description,
               style: DefaultTextStyle.of(context).style.copyWith(
-                fontSize: 13,
-              ),
+                    fontSize: 13,
+                  ),
               strutStyle: StrutStyle(
                 forceStrutHeight: false,
                 height: 1.4,
