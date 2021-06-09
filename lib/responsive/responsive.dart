@@ -35,3 +35,11 @@ enum ResponsivePlatform {
   tablet,
   mobile,
 }
+
+extension ResponsivePlatformExtension on ResponsivePlatform {
+  bool get isMobile => this == ResponsivePlatform.mobile;
+
+  bool get isTablet => this == ResponsivePlatform.tablet;
+
+  bool get isDesktop => this == ResponsivePlatform.desktop;
+}

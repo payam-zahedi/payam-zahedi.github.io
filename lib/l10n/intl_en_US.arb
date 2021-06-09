@@ -20,5 +20,15 @@
   "speaker": "Speaker & Organizer",
   "speakerDescription": "I love sharing my knowledge with the community by writing, speaking and organizing Meetups and events. I am also one of the funders & organizers of Persian Flutter Community. You can find our events at PersianFlutter.com.",
   "designTools": "Design Tools",
-  "designToolsDescription": "I'm curious about product design methods and tools and passionate to read about them. I also have the ability to use tools like Adobe XD and Figma."
+  "designToolsDescription": "I'm curious about product design methods and tools and passionate to read about them. I also have the ability to use tools like Adobe XD and Figma.",
+  "persianFlutterCommunity": "Persian Flutter Community",
+  "founder": "Founder",
+  "value2021": "2021",
+  "mobileDeveloper": "Mobile Developer",
+  "raSecretApplication": "RA Secret Application",
+  "flutterDeveloper": "Flutter Developer",
+  "droppCommerceApplication": "Dropp Commerce Application",
+  "persianFlutterCommunityDescription": "Persian Flutter Community description",
+  "rasecretDescription": "RaSecret description",
+  "droppCommerceDescription": "Dropp Commerce description"
 }

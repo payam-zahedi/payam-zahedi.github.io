@@ -259,6 +259,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Persian Flutter Community`
+  String get persianFlutterCommunity {
+    return Intl.message(
+      'Persian Flutter Community',
+      name: 'persianFlutterCommunity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Founder`
+  String get founder {
+    return Intl.message(
+      'Founder',
+      name: 'founder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2021`
+  String get value2021 {
+    return Intl.message(
+      '2021',
+      name: 'value2021',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobile Developer`
+  String get mobileDeveloper {
+    return Intl.message(
+      'Mobile Developer',
+      name: 'mobileDeveloper',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `RA Secret Application`
+  String get raSecretApplication {
+    return Intl.message(
+      'RA Secret Application',
+      name: 'raSecretApplication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flutter Developer`
+  String get flutterDeveloper {
+    return Intl.message(
+      'Flutter Developer',
+      name: 'flutterDeveloper',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dropp Commerce Application`
+  String get droppCommerceApplication {
+    return Intl.message(
+      'Dropp Commerce Application',
+      name: 'droppCommerceApplication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Persian Flutter Community description`
+  String get persianFlutterCommunityDescription {
+    return Intl.message(
+      'Persian Flutter Community description',
+      name: 'persianFlutterCommunityDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `RaSecret description`
+  String get rasecretDescription {
+    return Intl.message(
+      'RaSecret description',
+      name: 'rasecretDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dropp Commerce description`
+  String get droppCommerceDescription {
+    return Intl.message(
+      'Dropp Commerce description',
+      name: 'droppCommerceDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

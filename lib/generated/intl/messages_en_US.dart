@@ -26,16 +26,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "designTools": MessageLookupByLibrary.simpleMessage("Design Tools"),
         "designToolsDescription": MessageLookupByLibrary.simpleMessage(
             "I\'m curious about product design methods and tools and passionate to read about them. I also have the ability to use tools like Adobe XD and Figma."),
+        "droppCommerceApplication":
+            MessageLookupByLibrary.simpleMessage("Dropp Commerce Application"),
+        "droppCommerceDescription":
+            MessageLookupByLibrary.simpleMessage("Dropp Commerce description"),
         "family": MessageLookupByLibrary.simpleMessage("Zahedi"),
+        "flutterDeveloper":
+            MessageLookupByLibrary.simpleMessage("Flutter Developer"),
+        "founder": MessageLookupByLibrary.simpleMessage("Founder"),
         "github": MessageLookupByLibrary.simpleMessage("Github"),
         "linkedIn": MessageLookupByLibrary.simpleMessage("LinkedIn"),
         "medium": MessageLookupByLibrary.simpleMessage("Medium"),
+        "mobileDeveloper":
+            MessageLookupByLibrary.simpleMessage("Mobile Developer"),
         "name": MessageLookupByLibrary.simpleMessage("Payam"),
         "openSource": MessageLookupByLibrary.simpleMessage("Open Source"),
         "openSourceDescription": MessageLookupByLibrary.simpleMessage(
             "I learned everything from open source. So I decided to be part of this community. I use my free time to participate in open source and developers community. Even this Portfolio web site is Open source, you can check the source code of it in my Github Account."),
+        "persianFlutterCommunity":
+            MessageLookupByLibrary.simpleMessage("Persian Flutter Community"),
+        "persianFlutterCommunityDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Persian Flutter Community description"),
         "profileDescription": MessageLookupByLibrary.simpleMessage(
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
+        "raSecretApplication":
+            MessageLookupByLibrary.simpleMessage("RA Secret Application"),
+        "rasecretDescription":
+            MessageLookupByLibrary.simpleMessage("RaSecret description"),
         "socialTitle":
             MessageLookupByLibrary.simpleMessage("Find Me in Socials"),
         "softwareDeveloper":
@@ -48,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stackOverflow": MessageLookupByLibrary.simpleMessage("Stack Overflow"),
         "telegram": MessageLookupByLibrary.simpleMessage("telegram"),
         "title": MessageLookupByLibrary.simpleMessage("Payam Zahedi Portfolio"),
-        "twitter": MessageLookupByLibrary.simpleMessage("Twitter")
+        "twitter": MessageLookupByLibrary.simpleMessage("Twitter"),
+        "value2021": MessageLookupByLibrary.simpleMessage("2021")
       };
 }
