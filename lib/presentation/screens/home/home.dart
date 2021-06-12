@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/presentation/screens/home/widget/src/skills.dart';
 import 'package:portfolio/presentation/widgets/text/text_hint.dart';
 import 'widget/index.dart';
 import 'package:portfolio/responsive/responsive.dart';
@@ -14,8 +15,8 @@ class HomeScreen extends StatelessWidget {
           horizontal: (context.isMobile()
               ? 16
               : context.isTablet()
-              ? 24
-              : 64),
+                  ? 24
+                  : 64),
         ),
         child: CustomScrollView(
           slivers: [
@@ -28,18 +29,11 @@ class HomeScreen extends StatelessWidget {
                 child: Center(
                   child: Text(
                     context.localization.socialTitle,
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .subtitle1
-                        ?.copyWith(
-                      fontSize: 16,
-                      color: Theme
-                          .of(context)
-                          .colorScheme
-                          .onSurface,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                          fontSize: 16,
+                          color: Theme.of(context).colorScheme.onSurface,
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
                 ),
               ),
@@ -54,9 +48,7 @@ class HomeScreen extends StatelessWidget {
             SliverToBoxAdapter(child: WhatIDoWidget()),
             SliverToBoxAdapter(child: TextHint(text: 'Experience')),
             SliverToBoxAdapter(child: ExperienceWidget()),
-            // SliverToBoxAdapter(
-            //   child: TextHint(text: 'Skills'),
-            // ),
+            SliverToBoxAdapter(child: SkillsWidget())
           ],
         ),
       ),

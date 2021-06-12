@@ -47,12 +47,15 @@ class ExperienceWidget extends StatelessWidget {
     });
   }
 
-  List<List<Widget>> _buildTableRow(List<Widget> experiences, ResponsivePlatform platform) {
+  List<List<Widget>> _buildTableRow(
+      List<Widget> experiences, ResponsivePlatform platform) {
     final columnCount = _responsiveColumns(platform);
 
     final partition = <List<Widget>>[];
     for (var i = 0; i < experiences.length; i += columnCount) {
-      final count = (i + columnCount > experiences.length ? experiences.length : i + columnCount);
+      final count = (i + columnCount > experiences.length
+          ? experiences.length
+          : i + columnCount);
       partition.add(experiences.sublist(i, count));
     }
     while (partition.last.length < columnCount) {
@@ -61,5 +64,6 @@ class ExperienceWidget extends StatelessWidget {
     return partition;
   }
 
-  int _responsiveColumns(ResponsivePlatform platform) => platform.isDesktop ? 2 : 1;
+  int _responsiveColumns(ResponsivePlatform platform) =>
+      platform.isDesktop ? 2 : 1;
 }
