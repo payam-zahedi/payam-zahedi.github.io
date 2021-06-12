@@ -28,7 +28,11 @@
   "raSecretApplication": "RA Secret Application",
   "flutterDeveloper": "Flutter Developer",
   "droppCommerceApplication": "Dropp Commerce Application",
-  "persianFlutterCommunityDescription": "Persian Flutter Community description",
-  "rasecretDescription": "RaSecret description",
-  "droppCommerceDescription": "Dropp Commerce description"
+  "persianFlutterCommunityDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "rasecretDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "droppCommerceDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "softwereSkills": "SoftWere Skills",
+  "flutterSkills": "Flutter Skills",
+  "androidSkills": "Android Skills",
+  "designSkills": "Design Skills"
 }

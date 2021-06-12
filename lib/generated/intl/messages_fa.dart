@@ -21,8 +21,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "androidSkills": MessageLookupByLibrary.simpleMessage("Android Skills"),
         "contact": MessageLookupByLibrary.simpleMessage("تماس"),
         "cvButton": MessageLookupByLibrary.simpleMessage("دانلود رزومه"),
+        "designSkills": MessageLookupByLibrary.simpleMessage("Design Skills"),
         "designTools": MessageLookupByLibrary.simpleMessage("ابزارهای طراحی"),
         "designToolsDescription": MessageLookupByLibrary.simpleMessage(
             "در مورد روش ها و ابزارهای طراحی محصول کنجکاوم و دوست دارم درمورد آنها مطالعه کنم. من همچنین توانایی استفاده از ابزارهایی مانند Adobe XD و Figma را دارم."),
@@ -33,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "family": MessageLookupByLibrary.simpleMessage("زاهدی"),
         "flutterDeveloper":
             MessageLookupByLibrary.simpleMessage("Flutter Developer"),
+        "flutterSkills": MessageLookupByLibrary.simpleMessage("Flutter Skills"),
         "founder": MessageLookupByLibrary.simpleMessage("Founder"),
         "github": MessageLookupByLibrary.simpleMessage("Github"),
         "linkedIn": MessageLookupByLibrary.simpleMessage("LinkedIn"),
@@ -60,6 +63,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("توسعه دهنده نرم افزار"),
         "softwareDeveloperDescription": MessageLookupByLibrary.simpleMessage(
             "من یک توسعه دهنده نرم افزار هستم که از ساختن چیزهای جدید ، یادگیری و چالش ها لذت می برم. من در زمینه تولید نرم افزار موبایل تخصص دارم. علاوه بر موبایل به سایر زمینه های مهندسی نرم افزار نیز علاقه مند هستم. برای توسعه نرم افزارهای Multi-Platform از فریم ورک Flutter و از Kotlin برای تولید نرم افزارهای اندروید استفاده می کنم."),
+        "softwereSkills":
+            MessageLookupByLibrary.simpleMessage("SoftWere Skills"),
         "speaker": MessageLookupByLibrary.simpleMessage("سخنران و برنامه ریز"),
         "speakerDescription": MessageLookupByLibrary.simpleMessage(
             "من برای به اشتراک گذاشتن دانش خود با جامعه از طریق نوشتن ، ارائه دادن ، سازماندهی رویدادها بسیار مشتاقم. همچنین یکی از بنیانگذاران و سازمان دهندگان جامعه فلاتر فارسی هستم. می توانید رویدادهای ما را در PersianFlutter.com بیابید."),

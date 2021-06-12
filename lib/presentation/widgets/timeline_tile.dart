@@ -65,9 +65,8 @@ class TimeLineTile extends StatelessWidget {
             padding: startPadding,
             child: Text(
               position,
-              style: theme.textTheme.bodyText1?.copyWith(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 15,
+              style: theme.textTheme.headline6?.copyWith(
+                  fontWeight: FontWeight.bold,
                   wordSpacing: 1,
                   letterSpacing: .8),
             ),

@@ -21,18 +21,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "androidSkills": MessageLookupByLibrary.simpleMessage("Android Skills"),
         "contact": MessageLookupByLibrary.simpleMessage("Contact"),
         "cvButton": MessageLookupByLibrary.simpleMessage("Download CV"),
+        "designSkills": MessageLookupByLibrary.simpleMessage("Design Skills"),
         "designTools": MessageLookupByLibrary.simpleMessage("Design Tools"),
         "designToolsDescription": MessageLookupByLibrary.simpleMessage(
             "I\'m curious about product design methods and tools and passionate to read about them. I also have the ability to use tools like Adobe XD and Figma."),
         "droppCommerceApplication":
             MessageLookupByLibrary.simpleMessage("Dropp Commerce Application"),
-        "droppCommerceDescription":
-            MessageLookupByLibrary.simpleMessage("Dropp Commerce description"),
+        "droppCommerceDescription": MessageLookupByLibrary.simpleMessage(
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
         "family": MessageLookupByLibrary.simpleMessage("Zahedi"),
         "flutterDeveloper":
             MessageLookupByLibrary.simpleMessage("Flutter Developer"),
+        "flutterSkills": MessageLookupByLibrary.simpleMessage("Flutter Skills"),
         "founder": MessageLookupByLibrary.simpleMessage("Founder"),
         "github": MessageLookupByLibrary.simpleMessage("Github"),
         "linkedIn": MessageLookupByLibrary.simpleMessage("LinkedIn"),
@@ -45,21 +48,22 @@ class MessageLookup extends MessageLookupByLibrary {
             "I learned everything from open source. So I decided to be part of this community. I use my free time to participate in open source and developers community. Even this Portfolio web site is Open source, you can check the source code of it in my Github Account."),
         "persianFlutterCommunity":
             MessageLookupByLibrary.simpleMessage("Persian Flutter Community"),
-        "persianFlutterCommunityDescription":
-            MessageLookupByLibrary.simpleMessage(
-                "Persian Flutter Community description"),
+        "persianFlutterCommunityDescription": MessageLookupByLibrary.simpleMessage(
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
         "profileDescription": MessageLookupByLibrary.simpleMessage(
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
         "raSecretApplication":
             MessageLookupByLibrary.simpleMessage("RA Secret Application"),
-        "rasecretDescription":
-            MessageLookupByLibrary.simpleMessage("RaSecret description"),
+        "rasecretDescription": MessageLookupByLibrary.simpleMessage(
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
         "socialTitle":
             MessageLookupByLibrary.simpleMessage("Find Me in Socials"),
         "softwareDeveloper":
             MessageLookupByLibrary.simpleMessage("Software Developer"),
         "softwareDeveloperDescription": MessageLookupByLibrary.simpleMessage(
             "I\'m a software developer who enjoys building new things, learning and challenges. I specialize in mobile software development. But I\'m also interested in other areas of software engineering. I use Flutter to develop multi-platform software and use native Kotlin to produce native Android software."),
+        "softwereSkills":
+            MessageLookupByLibrary.simpleMessage("SoftWere Skills"),
         "speaker": MessageLookupByLibrary.simpleMessage("Speaker & Organizer"),
         "speakerDescription": MessageLookupByLibrary.simpleMessage(
             "I love sharing my knowledge with the community by writing, speaking and organizing Meetups and events. I am also one of the funders & organizers of Persian Flutter Community. You can find our events at PersianFlutter.com."),

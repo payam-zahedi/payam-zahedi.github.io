@@ -330,31 +330,71 @@ class S {
     );
   }
 
-  /// `Persian Flutter Community description`
+  /// `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
   String get persianFlutterCommunityDescription {
     return Intl.message(
-      'Persian Flutter Community description',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
       name: 'persianFlutterCommunityDescription',
       desc: '',
       args: [],
     );
   }
 
-  /// `RaSecret description`
+  /// `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
   String get rasecretDescription {
     return Intl.message(
-      'RaSecret description',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
       name: 'rasecretDescription',
       desc: '',
       args: [],
     );
   }
 
-  /// `Dropp Commerce description`
+  /// `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
   String get droppCommerceDescription {
     return Intl.message(
-      'Dropp Commerce description',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
       name: 'droppCommerceDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SoftWere Skills`
+  String get softwereSkills {
+    return Intl.message(
+      'SoftWere Skills',
+      name: 'softwereSkills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flutter Skills`
+  String get flutterSkills {
+    return Intl.message(
+      'Flutter Skills',
+      name: 'flutterSkills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Android Skills`
+  String get androidSkills {
+    return Intl.message(
+      'Android Skills',
+      name: 'androidSkills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Design Skills`
+  String get designSkills {
+    return Intl.message(
+      'Design Skills',
+      name: 'designSkills',
       desc: '',
       args: [],
     );

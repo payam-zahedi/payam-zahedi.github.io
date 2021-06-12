@@ -4,6 +4,7 @@ class TextHint extends StatelessWidget {
   TextHint({
     Key? key,
     required this.text,
+    this.style,
     this.dividerValue = 0.3,
     this.alignment,
     this.padding,
@@ -11,6 +12,7 @@ class TextHint extends StatelessWidget {
   }) : super(key: key ?? ValueKey(text));
 
   final String text;
+  final TextStyle? style;
   final double dividerValue;
   final AlignmentGeometry? alignment;
   final EdgeInsetsGeometry? margin;
@@ -19,7 +21,8 @@ class TextHint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final textStyle = theme.textTheme.headline6?.copyWith(
+    final textStyle = style ??
+        theme.textTheme.headline6?.copyWith(
           fontSize: 22,
           fontWeight: FontWeight.w900,
         ) ??

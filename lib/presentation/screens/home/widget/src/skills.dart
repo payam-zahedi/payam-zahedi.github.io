@@ -3,6 +3,7 @@ import 'package:portfolio/presentation/widgets/responsive/index.dart';
 import 'package:portfolio/presentation/widgets/text/text_hint.dart';
 import 'package:portfolio/resource/constant/skill.dart';
 import 'package:portfolio/responsive/responsive.dart';
+import 'package:portfolio/util/index.dart';
 
 class SkillsWidget extends StatelessWidget {
   const SkillsWidget({Key? key}) : super(key: key);
@@ -11,17 +12,25 @@ class SkillsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(builder: (context, platform) {
       return Table(
-        children: _tableChildren(platform),
+        children: _tableChildren(context, platform),
       );
     });
   }
 
-  List<TableRow> _tableChildren(ResponsivePlatform platform) {
+  List<TableRow> _tableChildren(BuildContext context, ResponsivePlatform platform) {
     final skills = [
-      SizedBox(child: SkillSection(title: 'SoftWere Skills', skills: softwareSkills)),
-      SizedBox(child: SkillSection(title: 'Flutter Skills', skills: flutterSkills)),
-      SizedBox(child: SkillSection(title: 'Android Skills', skills: androidSkills)),
-      SizedBox(child: SkillSection(title: 'Design Skills', skills: designSkills)),
+      SizedBox(
+        child: SkillSection(title: context.localization.softwereSkills, skills: softwareSkills),
+      ),
+      SizedBox(
+        child: SkillSection(title: context.localization.flutterSkills, skills: flutterSkills),
+      ),
+      SizedBox(
+        child: SkillSection(title: context.localization.androidSkills, skills: androidSkills),
+      ),
+      SizedBox(
+        child: SkillSection(title: context.localization.designSkills, skills: designSkills),
+      ),
     ];
 
     final columnCount = _responsiveColumns(platform);
@@ -63,7 +72,13 @@ class SkillSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        TextHint(text: title),
+        TextHint(
+          text: title,
+          style: theme.textTheme.headline6?.copyWith(
+            fontSize: 18,
+            fontWeight: FontWeight.w900,
+          ),
+        ),
         Wrap(
           alignment: WrapAlignment.start,
           crossAxisAlignment: WrapCrossAlignment.center,
@@ -87,7 +102,7 @@ class SkillSection extends StatelessWidget {
                     ),
                     child: Text(
                       item,
-                      style: theme.textTheme.bodyText2,
+                      style: theme.textTheme.bodyText1?.copyWith(fontSize: 12),
                     ),
                   ),
                 ),
