@@ -26,6 +26,7 @@ class Portfolio extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       home: HomeScreen(),
+
     );
   }
 }
