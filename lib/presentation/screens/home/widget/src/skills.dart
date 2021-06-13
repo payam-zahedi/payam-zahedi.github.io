@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/model/skill.dart';
+import 'package:portfolio/presentation/widgets/adaptive_tag.dart';
 import 'package:portfolio/presentation/widgets/responsive/index.dart';
 import 'package:portfolio/presentation/widgets/text/text_hint.dart';
 import 'package:portfolio/resource/constant/skill.dart';
@@ -62,12 +64,12 @@ class SkillSection extends StatelessWidget {
 
   final String title;
 
-  final List<String> skills;
+  final List<SkillModel> skills;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final scheme = theme.colorScheme;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,26 +88,18 @@ class SkillSection extends StatelessWidget {
           runSpacing: 8,
           children: skills
               .map(
-                (item) => Material(
-                  elevation: 0,
-                  color: Colors.transparent,
-                  shape: StadiumBorder(
-                    side: BorderSide(
-                      color: scheme.primary,
-                      width: 2,
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 14.0,
-                      vertical: 3,
-                    ),
-                    child: Text(
-                      item,
-                      style: theme.textTheme.bodyText1?.copyWith(fontSize: 12),
-                    ),
-                  ),
-                ),
+                (item) => item.hasImage
+                    ? AdaptiveTag(
+                        tag: item.name,
+                        leading: Image.network(
+                          item.imageUrl!,
+                          width: 12,
+                          height: 12,
+                        ),
+                      )
+                    : AdaptiveTag(
+                        tag: item.name,
+                      ),
               )
               .toList(),
         ),

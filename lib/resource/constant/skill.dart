@@ -1,40 +1,42 @@
+import 'package:portfolio/model/skill.dart';
+import 'package:portfolio/resource/index.dart';
 
 final softwareSkills = [
-  'Python & Django',
-  'Git',
-  'SOLID',
-  'OOP',
-  'TTD',
-  'CI/CD',
-  'Reactive Programing',
-  'Github Actions',
-  'MVC-MVP-MVVM',
+  SkillModel(name: 'Python & Django', imageUrl: python),
+  SkillModel(name: 'Git', imageUrl: git),
+  SkillModel(name: 'SOLID'),
+  SkillModel(name: 'OOP'),
+  SkillModel(name: 'TTD'),
+  SkillModel(name: 'CI/CD', imageUrl: ci_cd),
+  SkillModel(name: 'Reactive Programing', imageUrl: reactive),
+  SkillModel(name: 'Github Actions', imageUrl: githubActions),
+  SkillModel(name: 'MVC-MVP-MVVM'),
 ];
 
 final flutterSkills = [
-  'Flutter',
-  'Dart',
-  'BloC Pattern',
-  'Elements & RenderObjects',
-  'Dio & http',
-  'i18n & l10n',
-  'Plugging and Package',
-  'Streams & Futures',
-  'Isolate & EventLoop',
-  'RxDart',
-  'Animations',
+  SkillModel(name: 'Flutter', imageUrl: flutter),
+  SkillModel(name: 'Dart', imageUrl: dart),
+  SkillModel(name: 'BloC Pattern', imageUrl: bloc),
+  SkillModel(name: 'Elements & RenderObjects'),
+  SkillModel(name: 'Dio & http'),
+  SkillModel(name: 'i18n & l10n'),
+  SkillModel(name: 'Plugging and Package'),
+  SkillModel(name: 'Streams & Futures'),
+  SkillModel(name: 'Isolate & EventLoop'),
+  SkillModel(name: 'RxDart'),
+  SkillModel(name: 'Animations'),
 ];
 
 final androidSkills = [
-  'Android SDK',
-  'JAVA',
-  'Kotlin',
-  'Retrofit & Volley',
-  'Animations & Transitions',
+  SkillModel(name: 'Android SDK'),
+  SkillModel(name: 'JAVA', imageUrl: java),
+  SkillModel(name: 'Kotlin', imageUrl: kotlin),
+  SkillModel(name: 'Retrofit & Volley'),
+  SkillModel(name: 'Animations & Transitions'),
 ];
 
 final designSkills = [
-  'Adobe XD',
-  'Material Design',
-  'Cupertino',
+  SkillModel(name: 'Adobe XD', imageUrl: adobeXd),
+  SkillModel(name: 'Material Design'),
+  SkillModel(name: 'Cupertino'),
 ];

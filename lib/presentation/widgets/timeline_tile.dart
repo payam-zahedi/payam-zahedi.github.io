@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/presentation/widgets/adaptive_tag.dart';
 
 class TimeLineTile extends StatelessWidget {
   const TimeLineTile({
@@ -17,7 +18,6 @@ class TimeLineTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final scheme = theme.colorScheme;
     const startPadding = EdgeInsetsDirectional.only(start: 40.0, top: 4);
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16.0),
@@ -26,27 +26,7 @@ class TimeLineTile extends StatelessWidget {
         children: <Widget>[
           Row(
             children: <Widget>[
-              if (date?.isNotEmpty ?? false)
-                Material(
-                  elevation: 0,
-                  color: Colors.transparent,
-                  shape: StadiumBorder(
-                    side: BorderSide(
-                      color: scheme.primary,
-                      width: 2,
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 14.0,
-                      vertical: 3,
-                    ),
-                    child: Text(
-                      date!,
-                      style: theme.textTheme.bodyText2,
-                    ),
-                  ),
-                ),
+              if (date?.isNotEmpty ?? false) AdaptiveTag(tag: date!),
               SizedBox(width: 8),
               Expanded(
                 child: Text(
@@ -65,10 +45,8 @@ class TimeLineTile extends StatelessWidget {
             padding: startPadding,
             child: Text(
               position,
-              style: theme.textTheme.headline6?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  wordSpacing: 1,
-                  letterSpacing: .8),
+              style: theme.textTheme.headline6
+                  ?.copyWith(fontWeight: FontWeight.bold, wordSpacing: 1, letterSpacing: .8),
             ),
           ),
           Padding(
