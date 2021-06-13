@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/presentation/widgets/responsive/src/responsive_builder.dart';
 import 'package:portfolio/responsive/responsive.dart';
 import 'package:portfolio/resource/index.dart';
 import 'package:portfolio/util/index.dart';
+import 'package:url_launcher/link.dart';
 
 import 'avatar.dart';
 
@@ -20,8 +20,8 @@ class AboutMe extends StatelessWidget {
           '${localization.name} ${localization.family}',
           style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
         );
-        final jobTitle = SelectableText(S.of(context).softwareDeveloper,
-            style: textTheme.subtitle1);
+        final jobTitle =
+            SelectableText(context.localization.softwareDeveloper, style: textTheme.subtitle1);
         final imageAvatar = ImageAvatar(imageUrl: defaultImageAvatarUrl);
         final description = SelectableText(
           localization.profileDescription,
@@ -29,11 +29,16 @@ class AboutMe extends StatelessWidget {
           textAlign: TextAlign.start,
           strutStyle: StrutStyle(),
         );
-        final downloadButton = ElevatedButton(
-          onPressed: () {},
-          style: ElevatedButton.styleFrom(),
-          child: Text(S.of(context).cvButton),
-        );
+        final downloadButton = Link(
+            uri: Uri.parse(cvUrl),
+            target: LinkTarget.blank,
+            builder: (BuildContext context, Future<void> Function()? followLink) {
+              return ElevatedButton(
+                onPressed: followLink,
+                style: ElevatedButton.styleFrom(),
+                child: Text(context.localization.cvButton),
+              );
+            });
         final contactButton = ElevatedButton(
           style: ElevatedButton.styleFrom(
             shape: StadiumBorder(
@@ -44,7 +49,7 @@ class AboutMe extends StatelessWidget {
             ),
           ),
           onPressed: () {},
-          child: Text(S.of(context).contact),
+          child: Text(context.localization.contact),
         );
 
         if (platform == ResponsivePlatform.mobile) {
