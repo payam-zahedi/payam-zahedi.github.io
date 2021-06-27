@@ -31,7 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "droppCommerceApplication":
             MessageLookupByLibrary.simpleMessage("Dropp Commerce Application"),
         "droppCommerceDescription": MessageLookupByLibrary.simpleMessage(
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
+            "DroppCommerce is a location-based online store. We used the flutter and vue.js have been used to front-end development and node.js has been used back-end. you can find other info about it on DroppCommerce.ir"),
         "family": MessageLookupByLibrary.simpleMessage("Zahedi"),
         "flutterDeveloper":
             MessageLookupByLibrary.simpleMessage("Flutter Developer"),
@@ -49,13 +49,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "persianFlutterCommunity":
             MessageLookupByLibrary.simpleMessage("Persian Flutter Community"),
         "persianFlutterCommunityDescription": MessageLookupByLibrary.simpleMessage(
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
+            "Persian Flutter is a Community for Persian language developers of Flutter. Our goal is to be able to expand the Persian-speaking community through a series of events, trainings and experiences. For more information about this community and events, you can visit the PersianFlutter.com site."),
         "profileDescription": MessageLookupByLibrary.simpleMessage(
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
+            "I\'m a Software Engineer that fluent in Dart, Java, Kotlin languages and Flutter, Android Frameworks. With more than 6 years of programming experience. I am very interested in learning in different fields, working on Source Open projects, speaking in technical events and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community."),
         "raSecretApplication":
             MessageLookupByLibrary.simpleMessage("RA Secret Application"),
         "rasecretDescription": MessageLookupByLibrary.simpleMessage(
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
+            "Rasecret is a product that focuses on personal development. I was in this team to participate in the development of the mobile application of this product. We used flutter to develop the mobile application of this product."),
         "socialTitle":
             MessageLookupByLibrary.simpleMessage("Find Me in Socials"),
         "softwareDeveloper":
