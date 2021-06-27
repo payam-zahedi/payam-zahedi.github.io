@@ -20,8 +20,8 @@ class AboutMe extends StatelessWidget {
           '${localization.name} ${localization.family}',
           style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
         );
-        final jobTitle =
-            SelectableText(context.localization.softwareDeveloper, style: textTheme.subtitle1);
+        final jobTitle = SelectableText(context.localization.softwareDeveloper,
+            style: textTheme.subtitle1);
         final imageAvatar = ImageAvatar(imageUrl: defaultImageAvatarUrl);
         final description = SelectableText(
           localization.profileDescription,
@@ -32,25 +32,33 @@ class AboutMe extends StatelessWidget {
         final downloadButton = Link(
             uri: Uri.parse(cvUrl),
             target: LinkTarget.blank,
-            builder: (BuildContext context, Future<void> Function()? followLink) {
+            builder:
+                (BuildContext context, Future<void> Function()? followLink) {
               return ElevatedButton(
                 onPressed: followLink,
                 style: ElevatedButton.styleFrom(),
                 child: Text(context.localization.cvButton),
               );
             });
-        final contactButton = ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            shape: StadiumBorder(
-              side: BorderSide(
-                color: portfolioGrey200,
-                width: 2,
-              ),
-            ),
-          ),
-          onPressed: () {},
-          child: Text(context.localization.contact),
-        );
+
+        final hireButton = Link(
+            uri: Uri.parse(mailtoUrl),
+            target: LinkTarget.blank,
+            builder:
+                (BuildContext context, Future<void> Function()? followLink) {
+              return ElevatedButton(
+                onPressed: followLink,
+                style: ElevatedButton.styleFrom(
+                  shape: StadiumBorder(
+                    side: BorderSide(
+                      color: portfolioGrey200,
+                      width: 2,
+                    ),
+                  ),
+                ),
+                child: Text(context.localization.hireMe),
+              );
+            });
 
         if (platform == ResponsivePlatform.mobile) {
           return Column(
@@ -78,7 +86,7 @@ class AboutMe extends StatelessWidget {
                         SizedBox(height: 4),
                         SizedBox(
                           width: double.infinity,
-                          child: contactButton,
+                          child: hireButton,
                         ),
                       ],
                     ),
@@ -114,7 +122,7 @@ class AboutMe extends StatelessWidget {
                           children: <Widget>[
                             downloadButton,
                             SizedBox(width: 4),
-                            contactButton,
+                            hireButton,
                           ],
                         ),
                     ],
@@ -130,7 +138,7 @@ class AboutMe extends StatelessWidget {
                   children: <Widget>[
                     downloadButton,
                     SizedBox(width: 4),
-                    contactButton,
+                    hireButton,
                   ],
                 ),
               ),

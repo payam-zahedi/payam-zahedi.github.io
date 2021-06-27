@@ -7,6 +7,9 @@ const defaultImageAvatarUrl = '$defaultResourceUrl/image/profile.jpg';
 /// cv file
 const cvUrl = '$defaultResourceUrl/cv/payamzahedi_cv.pdf';
 
+/// email
+const defaultEmail = 'pzahedi1995@gmail.com';
+const mailtoUrl = 'mailto:$defaultEmail';
 
 /// skills icons
 const adobeXd = '$defaultResourceUrl/icon/code/adobe-xd.png';

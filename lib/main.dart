@@ -8,6 +8,7 @@ import 'generated/l10n.dart';
 void main() {
   runApp(Portfolio());
 }
+
 //ToDo(payam) : add code lab
 //ToDo(payam) : contact dialog
 //ToDo(payam) : add fun fact
@@ -27,7 +28,6 @@ class Portfolio extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       home: HomeScreen(),
-
     );
   }
 }

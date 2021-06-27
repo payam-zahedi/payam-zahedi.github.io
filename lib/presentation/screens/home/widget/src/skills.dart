@@ -19,19 +19,24 @@ class SkillsWidget extends StatelessWidget {
     });
   }
 
-  List<TableRow> _tableChildren(BuildContext context, ResponsivePlatform platform) {
+  List<TableRow> _tableChildren(
+      BuildContext context, ResponsivePlatform platform) {
     final skills = [
       SizedBox(
-        child: SkillSection(title: context.localization.softwereSkills, skills: softwareSkills),
+        child: SkillSection(
+            title: context.localization.softwereSkills, skills: softwareSkills),
       ),
       SizedBox(
-        child: SkillSection(title: context.localization.flutterSkills, skills: flutterSkills),
+        child: SkillSection(
+            title: context.localization.flutterSkills, skills: flutterSkills),
       ),
       SizedBox(
-        child: SkillSection(title: context.localization.androidSkills, skills: androidSkills),
+        child: SkillSection(
+            title: context.localization.androidSkills, skills: androidSkills),
       ),
       SizedBox(
-        child: SkillSection(title: context.localization.designSkills, skills: designSkills),
+        child: SkillSection(
+            title: context.localization.designSkills, skills: designSkills),
       ),
     ];
 
@@ -39,13 +44,16 @@ class SkillsWidget extends StatelessWidget {
 
     final partition = <List<Widget>>[];
     for (var i = 0; i < skills.length; i += columnCount) {
-      final count = (i + columnCount > skills.length ? skills.length : i + columnCount);
+      final count =
+          (i + columnCount > skills.length ? skills.length : i + columnCount);
       partition.add(skills.sublist(i, count));
     }
     while (partition.last.length < columnCount) {
       partition.last.add(SizedBox.shrink());
     }
-    return partition.map((experience) => TableRow(children: experience)).toList();
+    return partition
+        .map((experience) => TableRow(children: experience))
+        .toList();
   }
 
   int _responsiveColumns(ResponsivePlatform platform) => platform.isDesktop

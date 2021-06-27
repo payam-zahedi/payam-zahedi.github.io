@@ -11,6 +11,5 @@ class SkillModel {
   final String? imageUrl;
   final Color? color;
 
-
   bool get hasImage => imageUrl?.isNotEmpty ?? false;
 }

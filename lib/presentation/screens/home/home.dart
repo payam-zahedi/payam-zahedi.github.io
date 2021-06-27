@@ -11,7 +11,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(
-          vertical: 16,
           horizontal: (context.isMobile()
               ? 16
               : context.isTablet()
@@ -20,9 +19,8 @@ class HomeScreen extends StatelessWidget {
         ),
         child: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(
-              child: AboutMe(),
-            ),
+            SliverToBoxAdapter(child: SizedBox(height: 32)),
+            SliverToBoxAdapter(child: AboutMe()),
             SliverPadding(
               padding: EdgeInsets.only(top: 32),
               sliver: SliverToBoxAdapter(
@@ -48,7 +46,8 @@ class HomeScreen extends StatelessWidget {
             SliverToBoxAdapter(child: WhatIDoWidget()),
             SliverToBoxAdapter(child: TextHint(text: 'Experience')),
             SliverToBoxAdapter(child: ExperienceWidget()),
-            SliverToBoxAdapter(child: SkillsWidget())
+            SliverToBoxAdapter(child: SkillsWidget()),
+            SliverToBoxAdapter(child: SizedBox(height: 32))
           ],
         ),
       ),

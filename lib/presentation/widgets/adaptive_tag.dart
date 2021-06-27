@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class AdaptiveTag extends StatelessWidget {
@@ -23,7 +22,8 @@ class AdaptiveTag extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
-    final bgColor = color ?? ((leading == null) ? Colors.transparent : scheme.primary);
+    final bgColor =
+        color ?? ((leading == null) ? Colors.transparent : scheme.primary);
     final tagStyle = style ??
         style ??
         theme.textTheme.bodyText1?.copyWith(
@@ -31,8 +31,8 @@ class AdaptiveTag extends StatelessWidget {
           color: bgColor == Colors.transparent
               ? Colors.black
               : bgColor.computeLuminance() > 0.5
-              ? Colors.black
-              : Colors.white,
+                  ? Colors.black
+                  : Colors.white,
         );
 
     return Material(
