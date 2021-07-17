@@ -87,10 +87,10 @@ class S {
     );
   }
 
-  /// `Find Me in Socials`
+  /// `Find me in Socials`
   String get socialTitle {
     return Intl.message(
-      'Find Me in Socials',
+      'Find me in Socials',
       name: 'socialTitle',
       desc: '',
       args: [],

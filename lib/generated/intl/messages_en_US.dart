@@ -45,7 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "profileDescription" : MessageLookupByLibrary.simpleMessage("I\'m a Software Engineer fluent in Dart, Java, Kotlin languages, and Flutter, Android Frameworks. With more than six years of programming experience. I am very interested in learning in different fields, working on Open Source projects, speaking in technical events, and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community."),
     "raSecretApplication" : MessageLookupByLibrary.simpleMessage("RA Secret Application"),
     "rasecretDescription" : MessageLookupByLibrary.simpleMessage("Rasecret is a product that focuses on personal development. I was in this team to participate in the development of the mobile application of this product. We used flutter to develop the mobile application of this product."),
-    "socialTitle" : MessageLookupByLibrary.simpleMessage("Find Me in Socials"),
+    "socialTitle" : MessageLookupByLibrary.simpleMessage("Find me in Socials"),
     "softwareDeveloper" : MessageLookupByLibrary.simpleMessage("Software Developer"),
     "softwareDeveloperDescription" : MessageLookupByLibrary.simpleMessage("I\'m a software developer who enjoys building new things, learning and challenges. I specialize in mobile software development. But I\'m also interested in other areas of software engineering. I use Flutter to develop multi-platform software and use native Kotlin to produce native Android software."),
     "softwereSkills" : MessageLookupByLibrary.simpleMessage("SoftWere Skills"),
