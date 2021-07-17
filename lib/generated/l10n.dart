@@ -18,31 +18,28 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(_current != null,
-        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(_current != null, 'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
   }
 
-  static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
+  static const AppLocalizationDelegate delegate =
+    AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
-    final localeName = Intl.canonicalizedLocale(name);
+    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final localeName = Intl.canonicalizedLocale(name); 
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
       final instance = S();
       S._current = instance;
-
+ 
       return instance;
     });
-  }
+  } 
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(instance != null,
-        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+    assert(instance != null, 'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
     return instance!;
   }
 
@@ -60,10 +57,10 @@ class S {
     );
   }
 
-  /// `I'm a Software Engineer that fluent in Dart, Java, Kotlin languages and Flutter, Android Frameworks. With more than 6 years of programming experience. I am very interested in learning in different fields, working on Source Open projects, speaking in technical events and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community.`
+  /// `I'm a Software Engineer fluent in Dart, Java, Kotlin languages, and Flutter, Android Frameworks. With more than six years of programming experience. I am very interested in learning in different fields, working on Open Source projects, speaking in technical events, and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community.`
   String get profileDescription {
     return Intl.message(
-      'I\'m a Software Engineer that fluent in Dart, Java, Kotlin languages and Flutter, Android Frameworks. With more than 6 years of programming experience. I am very interested in learning in different fields, working on Source Open projects, speaking in technical events and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community.',
+      'I\'m a Software Engineer fluent in Dart, Java, Kotlin languages, and Flutter, Android Frameworks. With more than six years of programming experience. I am very interested in learning in different fields, working on Open Source projects, speaking in technical events, and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community.',
       name: 'profileDescription',
       desc: '',
       args: [],
