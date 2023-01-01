@@ -18,21 +18,17 @@ ThemeData _buildPortfolioTheme() {
     ),
   );
   return base.copyWith(
-    appBarTheme: const AppBarTheme(brightness: Brightness.light, elevation: 0),
+    appBarTheme: const AppBarTheme(elevation: 0),
     colorScheme: colorScheme,
-    accentColor: colorScheme.secondary,
     primaryColor: colorScheme.primary,
-    buttonColor: colorScheme.primary,
     scaffoldBackgroundColor: colorScheme.background,
     backgroundColor: colorScheme.background,
     cardColor: colorScheme.surface,
     errorColor: colorScheme.error,
     textTheme: _buildPortfolioTextTheme(base.textTheme),
     primaryTextTheme: _buildPortfolioTextTheme(base.primaryTextTheme),
-    accentTextTheme: _buildPortfolioTextTheme(base.accentTextTheme),
     iconTheme: base.iconTheme.copyWith(color: portfolioGrey300),
     primaryIconTheme: base.iconTheme.copyWith(color: colorScheme.primary),
-    accentIconTheme: base.iconTheme.copyWith(color: colorScheme.primary),
     buttonTheme: ButtonThemeData(
       colorScheme: colorScheme,
       textTheme: ButtonTextTheme.normal,
@@ -40,9 +36,8 @@ ThemeData _buildPortfolioTheme() {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: colorScheme.background,
-        onPrimary: colorScheme.onSurface,
-        onSurface: colorScheme.onSurface,
+        backgroundColor: colorScheme.background,
+        foregroundColor: colorScheme.onSurface,
         padding: EdgeInsets.symmetric(horizontal: 42, vertical: 20),
         elevation: 6,
         shape: buttonShape,
@@ -120,9 +115,7 @@ TextTheme _buildPortfolioTextTheme(TextTheme base) {
 
 const ColorScheme _portfolioLightScheme = ColorScheme(
   primary: portfolioBlue,
-  primaryVariant: portfolioBlue,
   secondary: portfolioGreen,
-  secondaryVariant: portfolioGreen,
   surface: portfolioGrey50,
   background: portfolioWhite,
   error: portfolioRed,
