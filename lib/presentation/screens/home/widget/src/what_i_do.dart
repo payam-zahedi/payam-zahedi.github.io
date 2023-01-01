@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttericon/linecons_icons.dart';
 import 'package:portfolio/generated/l10n.dart';
-import 'package:portfolio/presentation/widgets/responsive/index.dart';
 import 'package:portfolio/responsive/responsive.dart';
 
 import 'home_tile.dart';

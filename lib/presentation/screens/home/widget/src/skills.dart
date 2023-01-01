@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/model/skill.dart';
 import 'package:portfolio/presentation/widgets/adaptive_tag.dart';
-import 'package:portfolio/presentation/widgets/responsive/index.dart';
 import 'package:portfolio/presentation/widgets/text/text_hint.dart';
 import 'package:portfolio/resource/constant/skill.dart';
 import 'package:portfolio/responsive/responsive.dart';
@@ -24,7 +23,7 @@ class SkillsWidget extends StatelessWidget {
     final skills = [
       SizedBox(
         child: SkillSection(
-            title: context.localization.softwereSkills, skills: softwareSkills),
+            title: context.localization.softwareSkills, skills: softwareSkills),
       ),
       SizedBox(
         child: SkillSection(

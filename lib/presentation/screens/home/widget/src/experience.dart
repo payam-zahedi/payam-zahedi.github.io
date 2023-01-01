@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/presentation/widgets/responsive/index.dart';
 import 'package:portfolio/presentation/widgets/timeline_tile.dart';
 import 'package:portfolio/responsive/responsive.dart';
 import 'package:portfolio/util/index.dart';

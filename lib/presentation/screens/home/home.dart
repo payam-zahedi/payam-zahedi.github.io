@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/presentation/screens/home/widget/src/skills.dart';
 import 'package:portfolio/presentation/widgets/text/text_hint.dart';
 import 'widget/index.dart';
 import 'package:portfolio/responsive/responsive.dart';
