@@ -7,12 +7,14 @@ class TimeLineTile extends StatelessWidget {
     required this.title,
     required this.position,
     required this.description,
+    required this.assetImage,
     this.date,
   }) : super(key: key);
 
   final String title;
   final String position;
   final String description;
+  final String assetImage;
   final String? date;
 
   @override
@@ -41,28 +43,44 @@ class TimeLineTile extends StatelessWidget {
             ],
           ),
           SizedBox(height: 8),
-          Padding(
-            padding: startPadding,
-            child: Text(
-              position,
-              style: theme.textTheme.headline6?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  wordSpacing: 1,
-                  letterSpacing: .8),
-            ),
-          ),
-          Padding(
-            padding: startPadding,
-            child: Text(
-              description,
-              style: DefaultTextStyle.of(context).style.copyWith(
-                    fontSize: 13,
-                  ),
-              strutStyle: StrutStyle(
-                forceStrutHeight: false,
-                height: 1.4,
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipOval(
+                child: Image.asset(
+                  assetImage,
+                  width: 36,
+                  height: 36,
+                ),
               ),
-            ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsetsDirectional.only(top: 4, start: 8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        position,
+                        style: theme.textTheme.headline6?.copyWith(
+                            fontWeight: FontWeight.bold,
+                            wordSpacing: 1,
+                            letterSpacing: .8),
+                      ),
+                      Text(
+                        description,
+                        style: DefaultTextStyle.of(context).style.copyWith(
+                              fontSize: 13,
+                            ),
+                        strutStyle: StrutStyle(
+                          forceStrutHeight: false,
+                          height: 1.4,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),

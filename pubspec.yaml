@@ -31,6 +31,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/icon/social/
+    - assets/icon/experience/
 
 flutter_intl:
   main_locale: en_US
