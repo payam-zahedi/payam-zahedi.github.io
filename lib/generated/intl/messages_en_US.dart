@@ -60,14 +60,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "rekabTechnologies":
             MessageLookupByLibrary.simpleMessage("Rekab Technologies"),
         "rekabTechnologiesDescription": MessageLookupByLibrary.simpleMessage(
-            "Persian Flutter is a Community for Persian language developers of Flutter. Our goal is to be able to expand the Persian-speaking community through a series of events, trainings and experiences. For more information about this community and events, you can visit the PersianFlutter.com site."),
+            "Rekab City is a multi-module trip planner platform. You can easily plan your trip with public transport and get live updates about network interruptions."),
         "seniorDeveloper":
             MessageLookupByLibrary.simpleMessage("Senior Developer"),
         "seniorFlutterDeveloper":
             MessageLookupByLibrary.simpleMessage("Senior Flutter Developer"),
         "snappMobile": MessageLookupByLibrary.simpleMessage("Snapp Mobile"),
         "snappMobileDescription": MessageLookupByLibrary.simpleMessage(
-            "Persian Flutter is a Community for Persian language developers of Flutter. Our goal is to be able to expand the Persian-speaking community through a series of events, trainings and experiences. For more information about this community and events, you can visit the PersianFlutter.com site."),
+            "Snapp Mobile is part of the Snapp companies, a stable parent company with a long history of successful project deliveries and access to nearly 150 designers and developers for project scalability and expertise."),
         "socialTitle":
             MessageLookupByLibrary.simpleMessage("Find me in Socials"),
         "softwareDeveloper":
