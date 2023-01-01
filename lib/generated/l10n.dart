@@ -60,10 +60,10 @@ class S {
     );
   }
 
-  /// `I'm a Software Engineer fluent in Dart, Java, Kotlin languages, and Flutter, Android Frameworks. With more than six years of programming experience. I am very interested in learning in different fields, working on Open Source projects, speaking in technical events, and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community.`
+  /// `I'm a Software Engineer fluent in Dart, Java, Kotlin languages, and Flutter, Android Frameworks. With more than 8 years of programming experience. I am very interested in learning in different fields, working on Open Source projects, speaking in technical events, and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community.`
   String get profileDescription {
     return Intl.message(
-      'I\'m a Software Engineer fluent in Dart, Java, Kotlin languages, and Flutter, Android Frameworks. With more than six years of programming experience. I am very interested in learning in different fields, working on Open Source projects, speaking in technical events, and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community.',
+      'I\'m a Software Engineer fluent in Dart, Java, Kotlin languages, and Flutter, Android Frameworks. With more than 8 years of programming experience. I am very interested in learning in different fields, working on Open Source projects, speaking in technical events, and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community.',
       name: 'profileDescription',
       desc: '',
       args: [],
@@ -300,11 +300,21 @@ class S {
     );
   }
 
-  /// `RA Secret Application`
-  String get raSecretApplication {
+  /// `Senior Developer`
+  String get seniorDeveloper {
     return Intl.message(
-      'RA Secret Application',
-      name: 'raSecretApplication',
+      'Senior Developer',
+      name: 'seniorDeveloper',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Senior Flutter Developer`
+  String get seniorFlutterDeveloper {
+    return Intl.message(
+      'Senior Flutter Developer',
+      name: 'seniorFlutterDeveloper',
       desc: '',
       args: [],
     );
@@ -320,11 +330,61 @@ class S {
     );
   }
 
+  /// `Snapp Mobile`
+  String get snappMobile {
+    return Intl.message(
+      'Snapp Mobile',
+      name: 'snappMobile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rekab Technologies`
+  String get rekabTechnologies {
+    return Intl.message(
+      'Rekab Technologies',
+      name: 'rekabTechnologies',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `RA Secret Application`
+  String get raSecretApplication {
+    return Intl.message(
+      'RA Secret Application',
+      name: 'raSecretApplication',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Dropp Commerce Application`
   String get droppCommerceApplication {
     return Intl.message(
       'Dropp Commerce Application',
       name: 'droppCommerceApplication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Persian Flutter is a Community for Persian language developers of Flutter. Our goal is to be able to expand the Persian-speaking community through a series of events, trainings and experiences. For more information about this community and events, you can visit the PersianFlutter.com site.`
+  String get snappMobileDescription {
+    return Intl.message(
+      'Persian Flutter is a Community for Persian language developers of Flutter. Our goal is to be able to expand the Persian-speaking community through a series of events, trainings and experiences. For more information about this community and events, you can visit the PersianFlutter.com site.',
+      name: 'snappMobileDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Persian Flutter is a Community for Persian language developers of Flutter. Our goal is to be able to expand the Persian-speaking community through a series of events, trainings and experiences. For more information about this community and events, you can visit the PersianFlutter.com site.`
+  String get rekabTechnologiesDescription {
+    return Intl.message(
+      'Persian Flutter is a Community for Persian language developers of Flutter. Our goal is to be able to expand the Persian-speaking community through a series of events, trainings and experiences. For more information about this community and events, you can visit the PersianFlutter.com site.',
+      name: 'rekabTechnologiesDescription',
       desc: '',
       args: [],
     );

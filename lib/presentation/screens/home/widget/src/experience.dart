@@ -13,10 +13,26 @@ class ExperienceWidget extends StatelessWidget {
     final experiences = [
       SizedBox(
         child: TimeLineTile(
+          position: context.localization.seniorDeveloper,
+          description: context.localization.snappMobileDescription,
+          title: context.localization.snappMobile,
+          date: '2022-Present',
+        ),
+      ),
+      SizedBox(
+        child: TimeLineTile(
+          position: context.localization.seniorFlutterDeveloper,
+          description: context.localization.rekabTechnologiesDescription,
+          title: context.localization.rekabTechnologies,
+          date: '2021-2022',
+        ),
+      ),
+      SizedBox(
+        child: TimeLineTile(
           position: context.localization.founder,
           description: context.localization.persianFlutterCommunityDescription,
           title: context.localization.persianFlutterCommunity,
-          date: '2021',
+          date: '2021-Present',
         ),
       ),
       SizedBox(

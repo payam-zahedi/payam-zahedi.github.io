@@ -52,11 +52,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "persianFlutterCommunityDescription": MessageLookupByLibrary.simpleMessage(
             "Persian Flutter is a Community for Persian language developers of Flutter. Our goal is to be able to expand the Persian-speaking community through a series of events, trainings and experiences. For more information about this community and events, you can visit the PersianFlutter.com site."),
         "profileDescription": MessageLookupByLibrary.simpleMessage(
-            "I\'m a Software Engineer fluent in Dart, Java, Kotlin languages, and Flutter, Android Frameworks. With more than six years of programming experience. I am very interested in learning in different fields, working on Open Source projects, speaking in technical events, and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community."),
+            "I\'m a Software Engineer fluent in Dart, Java, Kotlin languages, and Flutter, Android Frameworks. With more than 8 years of programming experience. I am very interested in learning in different fields, working on Open Source projects, speaking in technical events, and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community."),
         "raSecretApplication":
             MessageLookupByLibrary.simpleMessage("RA Secret Application"),
         "rasecretDescription": MessageLookupByLibrary.simpleMessage(
             "Rasecret is a product that focuses on personal development. I was in this team to participate in the development of the mobile application of this product. We used flutter to develop the mobile application of this product."),
+        "rekabTechnologies":
+            MessageLookupByLibrary.simpleMessage("Rekab Technologies"),
+        "rekabTechnologiesDescription": MessageLookupByLibrary.simpleMessage(
+            "Persian Flutter is a Community for Persian language developers of Flutter. Our goal is to be able to expand the Persian-speaking community through a series of events, trainings and experiences. For more information about this community and events, you can visit the PersianFlutter.com site."),
+        "seniorDeveloper":
+            MessageLookupByLibrary.simpleMessage("Senior Developer"),
+        "seniorFlutterDeveloper":
+            MessageLookupByLibrary.simpleMessage("Senior Flutter Developer"),
+        "snappMobile": MessageLookupByLibrary.simpleMessage("Snapp Mobile"),
+        "snappMobileDescription": MessageLookupByLibrary.simpleMessage(
+            "Persian Flutter is a Community for Persian language developers of Flutter. Our goal is to be able to expand the Persian-speaking community through a series of events, trainings and experiences. For more information about this community and events, you can visit the PersianFlutter.com site."),
         "socialTitle":
             MessageLookupByLibrary.simpleMessage("Find me in Socials"),
         "softwareDeveloper":
