@@ -60,10 +60,10 @@ class S {
     );
   }
 
-  /// `I'm a Software Engineer fluent in Dart, Java, Kotlin languages, and Flutter, Android Frameworks. With more than 8 years of programming experience. I am very interested in learning in different fields, working on Open Source projects, speaking in technical events, and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community.`
+  /// `I'm a Mobile Developer with 7+ years of experience in test-driven mobile app development, specializing in Flutter, Kotlin, and Android Java. I've worked on a range of applications in various industries. I'm also an active contributor to open source projects and have worked on more than 10 projects to date. In addition to my technical skills, I'm also a team player with excellent communication skills, adaptability, and the ability to deliver high-quality work under tight deadlines. I'm always learning and staying up-to-date with the latest trends and technologies in mobile app development to improve my skills and knowledge.`
   String get profileDescription {
     return Intl.message(
-      'I\'m a Software Engineer fluent in Dart, Java, Kotlin languages, and Flutter, Android Frameworks. With more than 8 years of programming experience. I am very interested in learning in different fields, working on Open Source projects, speaking in technical events, and participating in programming communities. In addition, I am one of the founders and speakers of the Persian Flutter Community.',
+      'I\'m a Mobile Developer with 7+ years of experience in test-driven mobile app development, specializing in Flutter, Kotlin, and Android Java. I\'ve worked on a range of applications in various industries. I\'m also an active contributor to open source projects and have worked on more than 10 projects to date. In addition to my technical skills, I\'m also a team player with excellent communication skills, adaptability, and the ability to deliver high-quality work under tight deadlines. I\'m always learning and staying up-to-date with the latest trends and technologies in mobile app development to improve my skills and knowledge.',
       name: 'profileDescription',
       desc: '',
       args: [],

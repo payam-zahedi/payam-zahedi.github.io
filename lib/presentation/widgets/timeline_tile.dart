@@ -20,7 +20,6 @@ class TimeLineTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    const startPadding = EdgeInsetsDirectional.only(start: 40.0, top: 4);
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: Column(
