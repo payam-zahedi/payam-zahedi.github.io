@@ -19,12 +19,9 @@ ThemeData _buildPortfolioTheme() {
   );
   return base.copyWith(
     appBarTheme: const AppBarTheme(elevation: 0),
-    colorScheme: colorScheme,
     primaryColor: colorScheme.primary,
-    scaffoldBackgroundColor: colorScheme.background,
-    backgroundColor: colorScheme.background,
+    scaffoldBackgroundColor: colorScheme.surface,
     cardColor: colorScheme.surface,
-    errorColor: colorScheme.error,
     textTheme: _buildPortfolioTextTheme(base.textTheme),
     primaryTextTheme: _buildPortfolioTextTheme(base.primaryTextTheme),
     iconTheme: base.iconTheme.copyWith(color: portfolioGrey300),
@@ -36,12 +33,12 @@ ThemeData _buildPortfolioTheme() {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: colorScheme.background,
+        backgroundColor: colorScheme.surface,
         foregroundColor: colorScheme.onSurface,
         padding: EdgeInsets.symmetric(horizontal: 42, vertical: 20),
         elevation: 6,
         shape: buttonShape,
-        textStyle: _buildPortfolioTextTheme(base.textTheme).button,
+        textStyle: _buildPortfolioTextTheme(base.textTheme).labelLarge,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
@@ -66,46 +63,49 @@ ThemeData _buildPortfolioTheme() {
     ),
     dividerTheme: DividerThemeData(color: portfolioGrey100),
     dividerColor: portfolioGrey100,
+    colorScheme: colorScheme
+        .copyWith(surface: colorScheme.surface)
+        .copyWith(error: colorScheme.error),
   );
 }
 
 TextTheme _buildPortfolioTextTheme(TextTheme base) {
   return GoogleFonts.poppinsTextTheme(base.copyWith(
-    headline2: base.headline2?.copyWith(
+    displayMedium: base.displayMedium?.copyWith(
       color: portfolioGrey700,
     ),
-    headline3: base.headline3?.copyWith(
+    displaySmall: base.displaySmall?.copyWith(
       color: portfolioGrey700,
     ),
-    headline4: base.headline4?.copyWith(
+    headlineMedium: base.headlineMedium?.copyWith(
       color: portfolioGrey700,
     ),
-    headline5: base.headline5?.copyWith(
+    headlineSmall: base.headlineSmall?.copyWith(
       fontWeight: FontWeight.w500,
       color: portfolioGrey700,
     ),
-    headline6: base.headline6?.copyWith(
+    titleLarge: base.titleLarge?.copyWith(
       fontSize: 18,
       color: portfolioGrey700,
     ),
-    caption: base.caption?.copyWith(
+    bodySmall: base.bodySmall?.copyWith(
       fontWeight: FontWeight.w200,
       fontSize: 14,
       color: portfolioGrey500,
       height: 1.8,
     ),
-    bodyText1: base.bodyText1?.copyWith(
+    bodyLarge: base.bodyLarge?.copyWith(
       fontWeight: FontWeight.w500,
       fontSize: 16,
     ),
-    bodyText2: base.bodyText2?.copyWith(
+    bodyMedium: base.bodyMedium?.copyWith(
       fontSize: 14,
       color: portfolioGrey500,
     ),
-    subtitle1: base.subtitle1?.copyWith(
+    titleMedium: base.titleMedium?.copyWith(
       color: portfolioGrey300,
     ),
-    button: base.button?.copyWith(
+    labelLarge: base.labelLarge?.copyWith(
       fontWeight: FontWeight.w500,
       fontSize: 14,
       color: portfolioGrey700,
@@ -117,12 +117,10 @@ const ColorScheme _portfolioLightScheme = ColorScheme(
   primary: portfolioBlue,
   secondary: portfolioGreen,
   surface: portfolioGrey50,
-  background: portfolioWhite,
   error: portfolioRed,
   onPrimary: portfolioWhite,
   onSecondary: portfolioWhite,
   onSurface: portfolioGrey700,
-  onBackground: portfolioGrey500,
   onError: portfolioWhite,
   brightness: Brightness.light,
 );

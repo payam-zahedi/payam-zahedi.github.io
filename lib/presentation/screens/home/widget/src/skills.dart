@@ -83,7 +83,7 @@ class SkillSection extends StatelessWidget {
       children: [
         TextHint(
           text: title,
-          style: theme.textTheme.headline6?.copyWith(
+          style: theme.textTheme.titleLarge?.copyWith(
             fontSize: 18,
             fontWeight: FontWeight.w900,
           ),

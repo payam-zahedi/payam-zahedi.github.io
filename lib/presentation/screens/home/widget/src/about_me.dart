@@ -17,14 +17,14 @@ class AboutMe extends StatelessWidget {
       builder: (context, platform) {
         final developerName = SelectableText(
           '${localization.name} ${localization.family}',
-          style: textTheme.headline3?.copyWith(fontWeight: FontWeight.bold),
+          style: textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold),
         );
         final jobTitle = SelectableText(context.localization.softwareDeveloper,
-            style: textTheme.subtitle1);
+            style: textTheme.titleMedium);
         final imageAvatar = ImageAvatar(imageUrl: defaultImageAvatarUrl);
         final description = SelectableText(
           localization.profileDescription,
-          style: textTheme.caption?.copyWith(fontWeight: FontWeight.w600),
+          style: textTheme.bodySmall?.copyWith(fontWeight: FontWeight.w600),
           textAlign: TextAlign.start,
           strutStyle: StrutStyle(),
         );

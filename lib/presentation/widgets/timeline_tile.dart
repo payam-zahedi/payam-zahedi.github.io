@@ -32,7 +32,7 @@ class TimeLineTile extends StatelessWidget {
               Expanded(
                 child: Text(
                   title,
-                  style: theme.textTheme.caption?.copyWith(
+                  style: theme.textTheme.bodySmall?.copyWith(
                     fontWeight: FontWeight.w600,
                     fontSize: 12,
                   ),
@@ -60,7 +60,7 @@ class TimeLineTile extends StatelessWidget {
                     children: [
                       Text(
                         position,
-                        style: theme.textTheme.headline6?.copyWith(
+                        style: theme.textTheme.titleLarge?.copyWith(
                             fontWeight: FontWeight.bold,
                             wordSpacing: 1,
                             letterSpacing: .8),

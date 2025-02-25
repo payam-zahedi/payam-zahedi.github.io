@@ -22,7 +22,7 @@ class TextHint extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final textStyle = style ??
-        theme.textTheme.headline6?.copyWith(
+        theme.textTheme.titleLarge?.copyWith(
           fontSize: 22,
           fontWeight: FontWeight.w900,
         ) ??

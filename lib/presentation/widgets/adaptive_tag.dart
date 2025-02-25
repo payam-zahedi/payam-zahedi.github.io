@@ -26,7 +26,7 @@ class AdaptiveTag extends StatelessWidget {
         color ?? ((leading == null) ? Colors.transparent : scheme.primary);
     final tagStyle = style ??
         style ??
-        theme.textTheme.bodyText1?.copyWith(
+        theme.textTheme.bodyLarge?.copyWith(
           fontSize: 12,
           color: bgColor == Colors.transparent
               ? Colors.black
